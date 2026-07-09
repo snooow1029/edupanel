@@ -17,7 +17,8 @@ video + (course_requirement, student_persona)  ─►  3 agents  ─►  scores 
 | `evaluate.py` | The evaluator. Orchestrates the 3 agents, resolves videos, writes per-task JSON + a summary CSV. Run as a script. |
 | `backbones.py` | Backbone abstraction. Selects Gemini / GPT / Claude and handles frame sampling for the non-native backbones. |
 | `prompts/` | The four agent prompts (`agent1`, `agent2`, `subjective`, `subjective_text_only`) + a prompts README. |
-| `criteria/teaching_video_criteria_v2.json` | The rubric (A–F metric tree) the judge scores against. |
+| `criteria/teaching_video_criteria_v2.json` | The rubric (A–F 24-metric tree) the judge scores against. **Default.** |
+| `criteria/teaching_video_criteria_v1.json` | The previous rubric version. **The bundled `outputs/ai_commentary_12.gemini_deployed.json` was scored with v1.** See "Rubric versions" below. |
 | `inputs/pool_demo.json` | Demo input: the 12-video golden set with per-video course requirement + persona. |
 | `demo_videos/*.mp4` | The 12 demo videos referenced by `pool_demo.json`. |
 | `outputs/` | Reference outputs (see below). |
@@ -50,6 +51,25 @@ agents (1 & 3) `backbones.py` samples ~48 evenly-spaced frames with ffmpeg
 and sends them as images; Agent 2 is text-only on every backbone. Tunables:
 `VIBE_TEACH_VLM_FRAMES` (48), `VIBE_TEACH_VLM_MAXTOK` (8000),
 `VIBE_TEACH_VLM_FRAME_WIDTH` (768).
+
+## Rubric versions
+
+The rubric is an **A–F, 24-metric tree** (`A1–A6, B1–B4, C1–C4, D1–D4, E1–E3,
+F1–F3`). Two versions are bundled; pick with `TEACHING_CRITERIA_FILE`
+(default = v2):
+
+- **v2** (`teaching_video_criteria_v2.json`) — current default. v1 + four
+  definition/anchor fixes (F2 deduction-only, C4 decoupled from correctness,
+  D2 credits animation craft, F3 judged by pace/density vs Focus Time).
+- **v1** (`teaching_video_criteria_v1.json`) — the previous version. **The
+  bundled `outputs/ai_commentary_12.gemini_deployed.json` was scored under v1**,
+  so v2 scores are not directly comparable to it. Kept for reproducibility.
+
+Both files carry a `crosswalk_old_batch_audit_flags` appendix — a one-to-one map
+from the **30 legacy batch_audit flags** (the old flat output schema, e.g.
+`critical_fact_error_count`, `monotone_audio_level`) to their single canonical
+home in this A–F tree (deduping constructs that used to be double/triple-counted
+across dimensions). It documents lineage only; it is not itself a scoring schema.
 
 ## Running
 
