@@ -1,0 +1,329 @@
+{
+  "criteria_version": "v2.0",
+  "dimension_scores": {
+    "accuracy": 2.33,
+    "logic": 3.12,
+    "adaptability": 2.0,
+    "engagement": 3.5
+  },
+  "metric_scores": {
+    "A1_factual_accuracy": {
+      "score": 2,
+      "dimension": "A",
+      "tm_dim": "accuracy",
+      "evidence": "At [00:09], the narrator states that 'DNA in the chromatin replicates' during Prophase I, which is a critical chronological error as replication occurs during the S-phase of Interphase. Additionally, at [00:25], the on-screen text contains a spelling error, labeling a 'Tetrad' as a 'Tedrad'."
+    },
+    "A2_topic_coverage": {
+      "score": 2,
+      "dimension": "A",
+      "tm_dim": "accuracy",
+      "evidence": "The video title 'Cell Division and Meiosis' implies a comprehensive overview of the entire process, but the content is strictly limited to Prophase I [00:00-00:39], leaving out all subsequent phases of Meiosis I and the entirety of Meiosis II."
+    },
+    "A3_logical_structure": {
+      "score": 4,
+      "dimension": "A",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The sequence of events within Prophase I is logically ordered, moving from condensation [00:09] to synapsis [00:20] and then crossing over [00:29]."
+    },
+    "A4_learning_objectives": {
+      "score": 3,
+      "dimension": "A",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "While there is no formal 'what you will learn' slide, the video immediately identifies its focus on Meiosis I and Prophase I [00:00], which serves as a self-evident goal for a short conceptual clip."
+    },
+    "A5_curriculum_completeness": {
+      "score": 3,
+      "dimension": "A",
+      "tm_dim": "accuracy",
+      "evidence": "The video covers three of the four key learning points (Cell division, Chromosome changes, and Chromosome replication), but fails to address the 'Equal distribution of chromosomes' because it ends before Anaphase/Telophase."
+    },
+    "A6_bloom_alignment": {
+      "score": 5,
+      "dimension": "A",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The video is precisely calibrated to the 'understand' level, providing clear explanations of the mechanisms of genetic variation (crossing over) without unnecessary mathematical or advanced biochemical derivation."
+    },
+    "B1_signaling": {
+      "score": 4,
+      "dimension": "B",
+      "tm_dim": "engagement",
+      "evidence": "Labels like 'Sister chromatids' [00:15] and 'Spindle Fibers' [00:43] appear exactly as the narrator mentions them."
+    },
+    "B2_segmenting": {
+      "score": 2,
+      "dimension": "B",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The video is a continuous stream of complex steps with no pauses or recaps to help a middle schooler digest the information."
+    },
+    "B3_coherence": {
+      "score": 5,
+      "dimension": "B",
+      "tm_dim": "engagement",
+      "evidence": "The video is strictly focused on the biological process with no decorative distractions or irrelevant tangents."
+    },
+    "B4_modality_integration": {
+      "score": 5,
+      "dimension": "B",
+      "tm_dim": "engagement",
+      "evidence": "The narration and animation are perfectly synchronized, especially during the crossing over sequence at [00:32]."
+    },
+    "C1_examples_analogies": {
+      "score": 1,
+      "dimension": "C",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The explanation relies entirely on technical descriptions and 3D models with no real-world analogies to aid intuition."
+    },
+    "C2_scaffolding_strategy": {
+      "score": 4,
+      "dimension": "C",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The explanation builds effectively from the basic state of chromatin [00:00] to the complex formation of tetrads [00:20] and the resulting genetic exchange [00:29]."
+    },
+    "C3_conceptual_procedural_balance": {
+      "score": 5,
+      "dimension": "C",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The video is entirely conceptual, focusing on the 'why' and 'how' of genetic variation during meiosis rather than rote memorization of steps."
+    },
+    "C4_visual_explanation_power": {
+      "score": 4,
+      "dimension": "C",
+      "tm_dim": "engagement",
+      "evidence": "The visuals do the heavy lifting in explaining how segments swap [00:33] and how fibers pull chromosomes [00:45]."
+    },
+    "D1_speaker_delivery": {
+      "score": 4,
+      "dimension": "D",
+      "tm_dim": "engagement",
+      "evidence": "The speaker is clear and well-paced, though the script itself is too dense for the target age."
+    },
+    "D2_visual_design": {
+      "score": 4,
+      "dimension": "D",
+      "tm_dim": "engagement",
+      "evidence": "Clean 3D models and legible (though occasionally slightly soft) typography. The 'Tetrad' label at [00:25] is readable despite minor pixelation."
+    },
+    "D3_narrative_and_learner_agency": {
+      "score": 2,
+      "dimension": "D",
+      "tm_dim": "engagement",
+      "evidence": "The learner is a passive observer of a pre-recorded process; there is no 'why' established or inquiry-based framing."
+    },
+    "D4_audio_production": {
+      "score": 5,
+      "dimension": "D",
+      "tm_dim": "engagement",
+      "evidence": "Studio-quality audio with consistent volume and no audible cuts or glitches."
+    },
+    "E1_embedded_questions": {
+      "score": 1,
+      "dimension": "E",
+      "tm_dim": "engagement",
+      "evidence": "There are no questions or prompts for the learner to interact with the content."
+    },
+    "E2_generative_prompts": {
+      "score": 1,
+      "dimension": "E",
+      "tm_dim": "engagement",
+      "evidence": "The video does not ask the learner to perform any tasks like drawing or predicting."
+    },
+    "E3_worked_examples": {
+      "score": 1,
+      "dimension": "E",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The video contains no worked examples or opportunities for independent practice; it is a passive lecture format."
+    },
+    "F1_vocabulary_appropriateness": {
+      "score": 2,
+      "dimension": "F",
+      "tm_dim": "adaptation",
+      "evidence": "Uses 'synapsis', 'tetrad', and 'alleles' without scaffolding, which is too advanced for a 7th grader's introductory level."
+    },
+    "F2_prerequisite_awareness": {
+      "score": 2,
+      "dimension": "F",
+      "tm_dim": "adaptation",
+      "evidence": "Assumes the learner understands 'diploid' and 'chromatin' [00:02], which are explicitly listed as 'Lacks' for this persona."
+    },
+    "F3_pacing_fit": {
+      "score": 2,
+      "dimension": "F",
+      "tm_dim": "adaptation",
+      "evidence": "The information density is far too high for a 49-second clip intended for a 7th grader; it feels rushed and overwhelming."
+    }
+  },
+  "agent1_content_analyst": {
+    "teaching_mode": "Conceptual",
+    "content_map": [
+      {
+        "timestamp": "00:00",
+        "topic": "Introduction to Prophase I",
+        "detail_level": "Defined",
+        "description": "Defines the starting state of Meiosis I as a diploid cell containing chromatin with two sets of chromosomes."
+      },
+      {
+        "timestamp": "00:09",
+        "topic": "DNA Replication and Condensation",
+        "detail_level": "Explained",
+        "description": "Describes the process where chromatin replicates and condenses into X-shaped chromosomes."
+      },
+      {
+        "timestamp": "00:16",
+        "topic": "Sister Chromatids",
+        "detail_level": "Defined",
+        "description": "Identifies the identical halves of a replicated chromosome as sister chromatids."
+      },
+      {
+        "timestamp": "00:20",
+        "topic": "Synapsis and Tetrad Formation",
+        "detail_level": "Explained",
+        "description": "Explains how homologous chromosomes pair up to form a tetrad consisting of four chromatids."
+      },
+      {
+        "timestamp": "00:29",
+        "topic": "Crossing Over",
+        "detail_level": "Explained",
+        "description": "Describes the exchange of genetic material (alleles) between non-sister chromatids to create genetic variation."
+      },
+      {
+        "timestamp": "00:39",
+        "topic": "Late Prophase I Events",
+        "detail_level": "Explained",
+        "description": "Covers the disappearance of the nuclear membrane and the emergence of spindle fibers."
+      }
+    ],
+    "potential_issues": [
+      {
+        "timestamp": "00:09",
+        "description": "The narrator states that 'DNA in the chromatin replicates' during Prophase I. In the standard High School biology curriculum (AP/IB), DNA replication occurs during the S-phase of Interphase, prior to the start of Meiosis I. Stating it happens during Prophase I is a significant chronological error.",
+        "confidence": 0.95,
+        "evidence_type": "Critical Fact / Formula Error",
+        "category": "accuracy"
+      },
+      {
+        "timestamp": "00:25",
+        "description": "The on-screen text labels the structure as a 'Tedrad' instead of the correct biological term 'Tetrad'.",
+        "confidence": 0.99,
+        "evidence_type": "Typo",
+        "category": "accuracy"
+      }
+    ],
+    "presentation_analysis": {
+      "visual_style": "3D CGI Animation with on-screen labels",
+      "ai_slop_detected": [
+        "00:05: The chromatin visualization is a generic glowing fiber mass typical of stylized 3D educational assets."
+      ],
+      "audio_pacing": "Moderate",
+      "audio_transition_audit": {
+        "vocal_consistency": "Consistent throughout the clip.",
+        "glitches": []
+      },
+      "visual_content_alignment": {
+        "score": "High",
+        "observation": "The animation precisely follows the narration, showing chromosomes pairing during the mention of synapsis and segments swapping during crossing over."
+      },
+      "on_screen_figure_diagram_correctness": {
+        "score": "Medium",
+        "observation": "While the process of crossing over is visually well-represented, the 'Tedrad' typo (00:25) and the visual implication that replication occurs within the prophase nucleus (00:09) are factually problematic."
+      },
+      "written_text_legibility_audit": {
+        "issues": [
+          {
+            "timestamp": "00:25",
+            "type": "pixelation",
+            "issue": "The label 'Tedrad' is slightly blurry compared to the main 'Meiosis I' header, though still readable.",
+            "severity": "Minor"
+          }
+        ]
+      }
+    },
+    "written_text_legibility_audit": {
+      "issues": [
+        {
+          "timestamp": "00:25",
+          "type": "pixelation",
+          "issue": "The label 'Tedrad' is slightly blurry compared to the main 'Meiosis I' header, though still readable.",
+          "severity": "Minor"
+        }
+      ]
+    },
+    "observation_summary": "The video provides a clear visual walkthrough of Prophase I, effectively illustrating complex concepts like synapsis and crossing over. However, it contains a major conceptual error regarding the timing of DNA replication (attributing it to Prophase I instead of Interphase) and a spelling error for 'Tetrad'."
+  },
+  "agent2_gap_analysis_judge": {
+    "accuracy_score": 2.33,
+    "logic_score": 3.12,
+    "primary_language": "english",
+    "critical_fact_error_count": 1,
+    "key_learning_points_coverage": {
+      "total": 4,
+      "covered": 3,
+      "missing": [
+        "Equal distribution of chromosomes"
+      ]
+    },
+    "verified_errors": [
+      {
+        "timestamp": "00:09",
+        "type": "accuracy",
+        "severity": "critical",
+        "description": "DNA replication is attributed to Prophase I; it actually occurs during the S-phase of Interphase."
+      },
+      {
+        "timestamp": "00:25",
+        "type": "accuracy",
+        "severity": "minor",
+        "description": "On-screen typo: 'Tedrad' instead of 'Tetrad'."
+      }
+    ],
+    "scoring_rationale": "The score for A1 is lowered due to a significant conceptual error regarding the timing of DNA replication, which is both spoken and visually implied. The on-screen figure/diagram verdict is Medium: while the 3D animation of crossing over is high quality, the visual representation of replication within the prophase nucleus [00:09] and the 'Tedrad' typo [00:25] are factually incorrect. A2 is also low because the video's scope is much narrower than its title suggests."
+  },
+  "subjective_evaluation": {
+    "adaptability": {
+      "score": 2.0
+    },
+    "engagement": {
+      "score": 3.5
+    },
+    "experiential_context": {
+      "pacing_analysis": "The information density is extremely high for a 7th grader. In just 49 seconds, the video introduces over half a dozen complex terms (diploid, chromatin, synapsis, tetrad, alleles) without pausing for comprehension, which would likely overwhelm a student with a 15-minute focus budget.",
+      "delivery_assessment": "The narration is professional, fluent, and clear, though somewhat clinical. There are no audio artifacts or distracting background noises.",
+      "visual_assessment": "The 3D animation is high-quality and uses effective on-screen labeling to identify structures as they appear. The color-coding of chromosomes helps track the 'crossing over' process.",
+      "cognitive_friction_points": [
+        {
+          "timestamp": "00:02",
+          "issue": "Vocabulary Overload",
+          "reason": "The terms 'diploid' and 'chromatin' are used immediately without definition, assuming prior knowledge the persona lacks."
+        },
+        {
+          "timestamp": "00:25",
+          "issue": "Rapid Concept Introduction",
+          "reason": "The concept of 'synapsis' and 'tetrads' is introduced and moved past in under 5 seconds, giving the learner no time to process the structural change."
+        },
+        {
+          "timestamp": "00:33",
+          "issue": "Undefined Jargon",
+          "reason": "The term 'alleles' is used to explain crossing over, but a 7th grader likely doesn't know what an allele is yet."
+        }
+      ],
+      "positive_moment": {
+        "timestamp": "00:32",
+        "what_works": "The animation of the chromosome segments physically swapping colors provides a very clear visual representation of 'crossing over' that transcends the difficult vocabulary."
+      }
+    },
+    "top_fix_suggestion": "Slow down the pacing and add brief, plain-language definitions for technical terms like 'diploid' and 'chromatin' when they first appear."
+  },
+  "_meta": {
+    "video_url": "/home/zzz9447/Classroom_dev/AI_student/phase_2/deploy/videos/bad_mei_2.mp4",
+    "title_en": "Cell Division and Meiosis",
+    "big_concept": "Heredity",
+    "blooms_level": "understand",
+    "learning_goal": "1. Understand that cells can divide. 2. Recognize that chromosomes change during cell division.  3. Know that chromosomes replicate and are equally distributed during cell division. 4. Understand that cell division is related to growth and reproduction in living things.",
+    "key_learning_points": "1. Cell division  2. Chromosome changes during division 3. Chromosome replication  4. Equal distribution of chromosomes Note: Understand: Understand the basic idea of cell division and chromosome changes during the process.",
+    "student_persona": "Grade: 7th grade | Focus Time: 15 minutes | Background Knowledge: Has: everyday ideas that living things grow and are made of cells; rough sense that cells can split. Lacks: chromosome structure vocabulary; mitosis vs meiosis; technical labels beyond plain-language cell division. Learning target for this clip: introductory cell division and chromosome copy/segregation as in the video learning goals (not a meiosis deep dive).",
+    "timestamp": "20260702_084537",
+    "task_index": 1,
+    "run_id": 1,
+    "total_runs": 3,
+    "agent3_text_only": false
+  }
+}

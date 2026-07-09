@@ -1,0 +1,524 @@
+{
+  "meta": {
+    "name": "teaching_video_criteria",
+    "version": "v2.0",
+    "based_on": "v1.0 (24-metric A-F) + 2026-06-27 fixes: F2 reframed deduction-only, C4 decoupled from correctness, D2 credits animation craft, F3 pace-not-duration.",
+    "purpose": "One deduplicated, learning-science-grounded criteria tree that BOTH evaluators score against: rubric_coverage_check.py (single-call) and AI_student/phase_2/batch_audit_processor.py (multi-agent). Replaces batch_audit's 30 overlapping flags; each construct is measured exactly once, at one node.",
+    "scale": {
+      "type": "1-5 ordinal",
+      "1": "Absent: completely missing or severely fails this aspect.",
+      "2": "Emerging: basic attempt but inconsistent, limited effect.",
+      "3": "Adequate: meets baseline expectations, no obvious issues.",
+      "4": "Proficient: done well, clear design intent, consistent.",
+      "5": "Exemplary: outstanding, could serve as a model for this aspect."
+    },
+    "scoring_notes": "Canonical per-metric score is the 1-5 above. batch_audit's multi-agent split is preserved via the per-metric `evaluator` field (objective=Agent2 content/logic judge, subjective=Agent3 persona sim). batch_audit's objective hard-error findings (the old critical_fact_error / language gate) act as evidence and as score FLOORS on A1 (any uncorrected critical error caps A1<=2; non-English caps A1=1), not as a separate parallel scale.",
+    "tm_dimensions": {
+      "accuracy": "Teaching Monster: Accuracy — is what is taught correct and complete?",
+      "pedagogical_logic": "Teaching Monster: Pedagogical Logic — is it structured, scaffolded, and explained soundly?",
+      "adaptation": "Teaching Monster: Adaptation — is it tuned to THIS learner's level, prior knowledge, and pace?",
+      "engagement": "Teaching Monster: Engagement — multimedia design, delivery, and active-learning that sustain attention."
+    },
+    "channels": "Each metric lists `needs` (modalities the judgment requires: transcript / audio / visual) and `evaluator` (which batch_audit agent owns it)."
+  },
+  "dimensions": {
+    "A": {
+      "title": "Content Quality",
+      "metrics": {
+        "A1_factual_accuracy": {
+          "definition": "Are spoken facts, formulas, data, AND on-screen figures/diagrams/equations factually correct for what the video teaches?",
+          "anchors": {
+            "1": "Pervasive wrong/misleading content; a learner would draw false conclusions.",
+            "3": "No substantive errors; any nitpicks negligible.",
+            "5": "Exemplary correctness; visuals and statements are precise and well-matched to the science/math."
+          },
+          "tm_dim": "accuracy",
+          "evaluator": "objective",
+          "needs": [
+            "transcript",
+            "visual"
+          ],
+          "absorbs": [
+            "critical_fact_error_count",
+            "minor_slip_count",
+            "visual_alignment_issue_level"
+          ],
+          "floors": "Any uncorrected critical error (confidence>=0.8) caps A1<=2. primary_language in {mixed, non_english} caps A1=1.",
+          "discriminability": "low"
+        },
+        "A2_topic_coverage": {
+          "definition": "Does the video cover all topics implied by its title/learning goal, at appropriate depth (not absent, not so thin as to be essentially absent)?",
+          "anchors": {
+            "1": "Multiple core topics absent; fails its stated scope.",
+            "3": "All implied topics present with adequate coverage.",
+            "5": "Notably richer than the title implies; goes meaningfully beyond stated scope."
+          },
+          "tm_dim": "accuracy",
+          "evaluator": "objective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "title_depth_mismatch_level",
+            "content_completeness_level (title-implied half)",
+            "explanatory_depth_level (coverage half)"
+          ],
+          "discriminability": "medium"
+        },
+        "A3_logical_structure": {
+          "definition": "Are concepts presented in a logical, coherent sequence, with each idea ordered after its prerequisites and conclusions following from their support?",
+          "anchors": {
+            "1": "Concepts arrive before their prerequisites; conclusions unsupported; order obstructs understanding.",
+            "3": "Sound order; no idea needs a later one to make sense.",
+            "5": "Deliberately built sequence; each step motivates the next."
+          },
+          "tm_dim": "pedagogical_logic",
+          "evaluator": "objective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "sequence_disorder_count",
+            "causal_inconsistency_count"
+          ],
+          "discriminability": "medium"
+        },
+        "A4_learning_objectives": {
+          "definition": "Does the video state, near the start, what the learner will be able to do or understand afterwards (explicit objectives / 'what you'll learn')?",
+          "anchors": {
+            "1": "No statement of purpose anywhere; learner cannot tell what success looks like (or stated objectives misrepresent the content).",
+            "3": "Objectives or a clear 'what you'll learn' framing stated (or the single-concept goal is self-evident for a short clip).",
+            "5": "Crisp objectives that are explicitly returned to and fulfilled."
+          },
+          "tm_dim": "pedagogical_logic",
+          "evaluator": "objective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "learning_objectives_level"
+          ],
+          "discriminability": "high"
+        },
+        "A5_curriculum_completeness": {
+          "definition": "Relative to the Key Learning Points in the course requirement, does the video cover every required point (not just title-implied topics)? Judge against the title if no requirement is given.",
+          "anchors": {
+            "1": "Most key learning points missing or only named without explanation.",
+            "3": "Most key points covered; one or two missing or only superficial.",
+            "5": "All key points covered with appropriate depth, and connections between them made explicit."
+          },
+          "tm_dim": "accuracy",
+          "evaluator": "objective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "content_completeness_level (key-points half)"
+          ],
+          "discriminability": "unknown"
+        },
+        "A6_bloom_alignment": {
+          "definition": "Does the cognitive depth actually delivered match the target Bloom's level in the course requirement? Penalize BOTH under-shooting (only definitions when 'apply' is required) AND wasteful over-shooting (heavy derivation when only 'understand' is required).",
+          "anchors": {
+            "1": "Severe mismatch: delivered depth far below or wastefully above target throughout.",
+            "3": "Roughly on target; several sections at the wrong cognitive level.",
+            "5": "Precisely calibrated to the target level, depth deliberately tuned to it."
+          },
+          "tm_dim": "pedagogical_logic",
+          "evaluator": "objective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "pure_calculation_bias_level (depth-vs-target half)",
+            "title_depth_mismatch_level (depth half)"
+          ],
+          "discriminability": "unknown"
+        }
+      }
+    },
+    "B": {
+      "title": "Cognitive Design (Mayer)",
+      "metrics": {
+        "B1_signaling": {
+          "definition": "Does the video use visual cues — highlights, arrows, boxing, color-coding, zoom, pointer/cursor, progressive reveal — to guide attention to the relevant part of the screen while narrating?",
+          "anchors": {
+            "1": "Narration systematically references specific visual elements with no cueing; viewer cannot follow without pausing.",
+            "3": "Basic signaling present and sufficient, or content simple enough that explicit cueing is unnecessary.",
+            "5": "Consistently timed, precise signaling; viewer always knows where to look."
+          },
+          "tm_dim": "engagement",
+          "evaluator": "subjective",
+          "needs": [
+            "visual"
+          ],
+          "absorbs": [
+            "visual_signaling_level"
+          ],
+          "discriminability": "high"
+        },
+        "B2_segmenting": {
+          "definition": "Is the video segmented at cognitive turning points — with recaps, signposted transitions, or natural pauses between chunks — so the learner can assimilate before the next idea, without information overload?",
+          "anchors": {
+            "1": "One undifferentiated stream, no chunk boundaries or recaps; cognitively overwhelming.",
+            "3": "Reasonable chunking; topic shifts signposted or paced so the learner keeps up.",
+            "5": "Deliberate segmentation with crisp recaps at every turning point."
+          },
+          "tm_dim": "pedagogical_logic",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript",
+            "visual"
+          ],
+          "absorbs": [
+            "segmenting_level",
+            "information_overload_count"
+          ],
+          "discriminability": "high"
+        },
+        "B3_coherence": {
+          "definition": "Is the video free of irrelevant or distracting material — decorative animations with no teaching payload, tangents, excessive branding, seductive details (Mayer's coherence principle)?",
+          "anchors": {
+            "1": "Eye-candy/tangents replace substance; learner asks 'why am I watching this?'.",
+            "3": "Largely on-task; at most one minor decorative distraction.",
+            "5": "Every element earns its place; nothing extraneous."
+          },
+          "tm_dim": "engagement",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript",
+            "visual"
+          ],
+          "absorbs": [
+            "decorative_eye_candy_level"
+          ],
+          "discriminability": "low"
+        },
+        "B4_modality_integration": {
+          "definition": "Do narration and visuals COMPLEMENT each other (not redundant word-for-word text) and stay SYNCHRONIZED — the right picture present when the words need it, never fighting or ignoring each other?",
+          "anchors": {
+            "1": "Visuals repeatedly contradict, lag, or distract from narration; learner must ignore the screen.",
+            "3": "Narration and visuals generally aligned; at most one harmless mismatch.",
+            "5": "Tight, complementary integration; words and visuals each carry distinct, synchronized load."
+          },
+          "tm_dim": "engagement",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript",
+            "audio",
+            "visual"
+          ],
+          "absorbs": [
+            "disconnect_level"
+          ],
+          "discriminability": "low"
+        }
+      }
+    },
+    "C": {
+      "title": "Explanation Quality",
+      "metrics": {
+        "C1_examples_analogies": {
+          "definition": "Does the video use analogies, concrete examples, or multiple representations to make abstract concepts intuitive?",
+          "anchors": {
+            "1": "Pure abstraction; no examples, analogies, or alternate representations.",
+            "3": "At least one effective example/analogy for the key concept.",
+            "5": "Rich, well-chosen examples and analogies throughout that genuinely build intuition."
+          },
+          "tm_dim": "pedagogical_logic",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [],
+          "discriminability": "medium"
+        },
+        "C2_scaffolding_strategy": {
+          "definition": "Does the video build from what the learner knows to what they need (known->unknown bridge), motivate each formula/step (intuition, derivation sketch, limiting case), and avoid unjustified logic leaps?",
+          "anchors": {
+            "1": "Formulas presented as facts with zero scaffolding; derivations riddled with unexplained leaps.",
+            "3": "Definitions and reasoning present; at most one key 'why' skipped.",
+            "5": "Every step motivated and bridged from prior knowledge; standout exposition."
+          },
+          "tm_dim": "pedagogical_logic",
+          "evaluator": "objective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "scaffolding_failure_level",
+            "missing_scaffolding_level"
+          ],
+          "discriminability": "high"
+        },
+        "C3_conceptual_procedural_balance": {
+          "definition": "Is there an appropriate balance between 'understanding why' (concept) and 'knowing how to do' (procedure), rather than a drill of worked calculations with thin theory?",
+          "anchors": {
+            "1": "Almost pure calculation/procedure (>85%); a worked-examples playlist with no conceptual spine.",
+            "3": "Theory and procedure both present and reasonably balanced for the goal.",
+            "5": "Concept-first spine; calculations subordinate, illustrating rather than dominating."
+          },
+          "tm_dim": "pedagogical_logic",
+          "evaluator": "objective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "pure_calculation_bias_level"
+          ],
+          "discriminability": "high"
+        },
+        "C4_visual_explanation_power": {
+          "definition": "Do the visuals do real explanatory work — actively reveal a mechanism (how/why), not merely decorate or restate the conclusion as text? Static/decorative where a dynamic build is needed scores low; a visual the concept would be harder to grasp WITHOUT scores high. (Judges explanatory USE of visuals only — geometric/factual correctness of the figure is scored under A1, not here.)",
+          "anchors": {
+            "1": "Visuals static or decorative; all conceptual work done by narration; OR narration actively ignores/devalues the visual.",
+            "3": "Key concepts have supporting visuals that illustrate the idea.",
+            "5": "Visuals carry genuine explanatory load; the chosen visual approach makes the concept clearer than words alone could."
+          },
+          "tm_dim": "engagement",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript",
+            "visual"
+          ],
+          "absorbs": [
+            "visual_pairing_level",
+            "ineffective_visual_representation_level"
+          ],
+          "discriminability": "unknown",
+          "pilot_validated": "Confirmed 2026-06-02: drops cleanly when narration stops leveraging / devalues the visual (C4txt_severe -> -0.67 swing). The OLD visual-only degradation (curve removed) did NOT move it — detection requires the defect to surface in narration."
+        }
+      }
+    },
+    "D": {
+      "title": "Engagement & Presentation",
+      "metrics": {
+        "D1_speaker_delivery": {
+          "definition": "Is the speaker's delivery conducive to sustained attention — expressive (not flat/monotone/robotic) AND FLUENT (not halting, stuttering, or full of false starts/repetitions)?",
+          "anchors": {
+            "1": "Persistently soporific (drone/monotone) OR so disfluent — stutters, restarts, repeated words, broken cadence — that following the delivery is a strain.",
+            "3": "Clear and followable; neither notably flat nor notably disfluent.",
+            "5": "Energizing, well-paced, fluent delivery that actively sustains attention."
+          },
+          "tm_dim": "engagement",
+          "evaluator": "subjective",
+          "needs": [
+            "audio"
+          ],
+          "absorbs": [
+            "monotone_audio_level"
+          ],
+          "adds": [
+            "disfluency / halting delivery (NEW — closes the D4txt pilot gap; the old intelligibility+continuity flags could not catch stuttering because clear-but-stuttered speech is still intelligible and gap-free)"
+          ],
+          "discriminability": "high"
+        },
+        "D2_visual_design": {
+          "definition": "Is the overall visual design clean, readable, uncluttered, well-composed (hierarchy/alignment/spacing), free of generic 'AI-slop' imagery, with legible on-screen text/labels — and is any animation/motion smooth and well-crafted? (Whether the visual HELPS understanding is C4, not here.)",
+          "anchors": {
+            "1": "Cluttered, poorly composed, illegible text, or dominant generic AI art throughout.",
+            "3": "Clean and readable; at most one weak slide.",
+            "5": "Polished, consistent, professional composition — and smooth, well-crafted animation where present — that aids reading."
+          },
+          "tm_dim": "engagement",
+          "evaluator": "subjective",
+          "needs": [
+            "visual"
+          ],
+          "absorbs": [
+            "visual_clutter_level",
+            "slide_layout_level",
+            "written_text_legibility_level",
+            "visual_accessibility_level",
+            "ai_generated_fatigue_level"
+          ],
+          "discriminability": "low"
+        },
+        "D3_narrative_and_learner_agency": {
+          "definition": "Does the video establish WHY the topic matters, build a question -> exploration -> resolution arc, and position the learner as an active discoverer rather than a passive recipient?",
+          "anchors": {
+            "1": "No motivational framing; content starts abruptly; learner purely passive.",
+            "3": "Clear relevance ('why this matters') plus a summary/takeaway.",
+            "5": "Sustained narrative arc and 'aha' moments; learner consistently framed as discoverer."
+          },
+          "tm_dim": "engagement",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "narrative_agency_level"
+          ],
+          "discriminability": "unknown"
+        },
+        "D4_audio_production": {
+          "definition": "Is the audio signal clear and continuous — decodable words (no mumbling/clipping/masking noise) and smooth joins (no abrupt voice-identity shifts, overlaps, gaps, or robotic cut-offs at transitions)?",
+          "anchors": {
+            "1": "Largely unintelligible or pervasive splice/dropout artifacts dominate listening.",
+            "3": "Clear and continuous; at most one minor artifact.",
+            "5": "Studio-clean, seamless audio throughout."
+          },
+          "tm_dim": "engagement",
+          "evaluator": "subjective",
+          "needs": [
+            "audio"
+          ],
+          "absorbs": [
+            "speech_intelligibility_level",
+            "audio_continuity_level"
+          ],
+          "optional_signal": "May be backed by a deterministic DSP measurement (clipping count, SNR, dropout seconds) since signal-level artifacts are sub-perceptual to the LLM (see D4 pilot).",
+          "discriminability": "medium"
+        }
+      }
+    },
+    "E": {
+      "title": "Active Learning Design",
+      "metrics": {
+        "E1_embedded_questions": {
+          "definition": "Does the video include genuine questions, quizzes, or pause-and-think prompts during viewing (not rhetorical questions the narrator immediately answers)?",
+          "anchors": {
+            "1": "Fully passive; no embedded questions or pauses.",
+            "3": "At least one genuine posed question with room to think.",
+            "5": "Well-placed checks for understanding at the right cognitive moments."
+          },
+          "tm_dim": "engagement",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "active_learning_level (question half)"
+          ],
+          "discriminability": "high"
+        },
+        "E2_generative_prompts": {
+          "definition": "Does the video prompt learners to DO something generative — predict, explain, draw, summarize, 'try it yourself'?",
+          "anchors": {
+            "1": "No invitation to generate anything; watch-only.",
+            "3": "At least one real generative prompt with room to act.",
+            "5": "Recurrent generative activity woven through the lesson."
+          },
+          "tm_dim": "engagement",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "active_learning_level (generative half)"
+          ],
+          "discriminability": "high"
+        },
+        "E3_worked_examples": {
+          "definition": "Does the video provide worked examples with progressive fading toward independent practice (full worked -> partially worked -> learner does it)?",
+          "anchors": {
+            "1": "No worked examples where the procedure clearly needs them.",
+            "3": "Worked examples present and clearly stepped.",
+            "5": "Deliberate fading from fully-worked to independent practice."
+          },
+          "tm_dim": "pedagogical_logic",
+          "evaluator": "objective",
+          "needs": [
+            "transcript",
+            "visual"
+          ],
+          "absorbs": [],
+          "discriminability": "high"
+        }
+      }
+    },
+    "F": {
+      "title": "Learner Adaptability",
+      "metrics": {
+        "F1_vocabulary_appropriateness": {
+          "definition": "Are technical terms introduced at a level appropriate for this learner's grade/background, with definitions when needed (undefined jargon beyond their stated knowledge counts against)?",
+          "anchors": {
+            "1": "Pervasive undefined jargon beyond the persona's level.",
+            "3": "Terms generally pitched right; key new terms defined.",
+            "5": "Vocabulary precisely tuned to the persona; every new term scaffolded."
+          },
+          "tm_dim": "adaptation",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "jargon_overload_level"
+          ],
+          "discriminability": "low"
+        },
+        "F2_prerequisite_awareness": {
+          "definition": "Does the video stay WITHIN this persona's prior knowledge? Scored by DEDUCTION: penalize ONLY when the content assumes or requires knowledge the persona LACKS (esp. items under the persona's 'Lacks'). Do NOT require the video to actively mention, review, or re-teach prerequisites — a video pitched correctly at the persona scores high even if it never revisits background. This measures over-assumption, not the presence of prerequisite coverage.",
+          "anchors": {
+            "1": "Core steps require knowledge the persona lacks; the persona would be lost and give up.",
+            "3": "Mostly within the persona's reach; a few spots assume something under 'Lacks' but can be patched while watching.",
+            "5": "Stays entirely within the persona's prior knowledge; nothing is assumed beyond their background (no active prerequisite review required to earn this)."
+          },
+          "tm_dim": "adaptation",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript"
+          ],
+          "absorbs": [
+            "prerequisite_gap_level"
+          ],
+          "discriminability": "medium"
+        },
+        "F3_pacing_fit": {
+          "definition": "Is the information density and speaking rate appropriate for this persona's grade and Focus Time — not too rushed, not padded, not over-rehashing what they already know? Judge by on-screen PACE / information density relative to Focus Time, NOT by raw total duration: a longer video that stays within the persona's pace and finishes the material is fine.",
+          "anchors": {
+            "1": "Unwatchable for this persona: Focus Time blown by padding, or so dense/fast that constant rewinding is needed.",
+            "3": "Occasionally too fast/slow but finishes within Focus Time without major frustration.",
+            "5": "Rhythm and density ideally matched to this persona's attention and baseline."
+          },
+          "tm_dim": "adaptation",
+          "evaluator": "subjective",
+          "needs": [
+            "transcript",
+            "audio"
+          ],
+          "absorbs": [
+            "pacing_mismatch_level"
+          ],
+          "discriminability": "medium"
+        }
+      }
+    }
+  },
+  "crosswalk_old_batch_audit_flags": {
+    "_comment": "Every one of the 30 batch_audit flags maps to exactly one canonical metric (the home where that construct is now measured ONCE). Flags previously double/triple-counted are listed at their single new home.",
+    "critical_fact_error_count": "A1",
+    "minor_slip_count": "A1",
+    "visual_alignment_issue_level": "A1",
+    "title_depth_mismatch_level": "A2",
+    "content_completeness_level": "A2+A5 (title vs key-points)",
+    "explanatory_depth_level": "A2/A6/C2 (coverage vs depth-to-target vs scaffolding)",
+    "sequence_disorder_count": "A3",
+    "causal_inconsistency_count": "A3",
+    "learning_objectives_level": "A4",
+    "scaffolding_failure_level": "C2 (was double-counted in accuracy+logic; now once)",
+    "missing_scaffolding_level": "C2 (was a 3rd copy in adaptability; merged)",
+    "pure_calculation_bias_level": "C3 (+A6 depth-to-target)",
+    "visual_pairing_level": "C4",
+    "ineffective_visual_representation_level": "C4",
+    "visual_signaling_level": "B1",
+    "segmenting_level": "B2",
+    "information_overload_count": "B2",
+    "decorative_eye_candy_level": "B3",
+    "disconnect_level": "B4",
+    "monotone_audio_level": "D1",
+    "DISFLUENCY_new": "D1",
+    "visual_clutter_level": "D2",
+    "slide_layout_level": "D2",
+    "written_text_legibility_level": "D2",
+    "visual_accessibility_level": "D2",
+    "ai_generated_fatigue_level": "D2",
+    "narrative_agency_level": "D3",
+    "speech_intelligibility_level": "D4",
+    "audio_continuity_level": "D4",
+    "active_learning_level": "E1+E2 (questions vs generative)",
+    "jargon_overload_level": "F1",
+    "prerequisite_gap_level": "F2",
+    "pacing_mismatch_level": "F3 (+B2 chunking)"
+  }
+}

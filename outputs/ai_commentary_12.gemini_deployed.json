@@ -1,0 +1,722 @@
+{
+  "phys_slop_1": {
+    "dims": {
+      "accuracy": 3.0,
+      "logic": 3.25,
+      "adaptability": 4.33,
+      "engagement": 3.9
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5,
+        "evidence": "The log-log plots and planetary data tables are scientifically accurate and correctly formatted for the context of the lesson [07:40]."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 2,
+        "evidence": "The video content is a MATLAB programming tutorial using Kepler's Law as a dataset. It does not address the physics-heavy learning goals implied by the title 'Circular Motion' such as centripetal acceleration or gravitational force derivation [00:00]."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3,
+        "evidence": "[02:25] Uses the standard solar system planetary data as the primary example, which is concrete but lacks novel analogies to build deeper physical intuition."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 4,
+        "evidence": "[04:23] The transition from a data table to a log-log plot visually demonstrates why a power law appears as a straight line, aiding the persona's lack of intuitive connection."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 4,
+        "evidence": "High-contrast slides with clear, large-font MATLAB code blocks that are easily readable."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 4,
+        "evidence": "[03:30] Asks the learner to predict what will happen when assigning an empty matrix to a table column, providing a specific prompt for thought."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 3,
+        "evidence": "[01:35] Encourages the learner to use the 'doc' command or Google to self-study the MATLAB help files for new functions."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 5,
+        "evidence": "Terms like 'linear regression', 'log-log plots', and 'CSV' are perfectly pitched for a first-year engineering/science student."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 5,
+        "evidence": "Correctly assumes the student knows Kepler's Third Law formula [02:55] and focuses the instruction on the MATLAB implementation rather than re-teaching the physics."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3,
+        "evidence": "The pace is appropriate, but the total duration is slightly long for the persona's 6-minute focus time, potentially leading to waning attention during the final task."
+      }
+    }
+  },
+  "bad_over_3": {
+    "dims": {
+      "accuracy": 2.0,
+      "logic": 2.0,
+      "adaptability": 2.0,
+      "engagement": 3.4
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 3,
+        "evidence": "The definitions of overfitting [00:00] and the list of mitigation techniques like regularization and dropout [00:18] are factually correct."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 1,
+        "evidence": "The video completely fails to address 'Underfitting' [00:00], which is a primary component of the title and the intended scope."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 1,
+        "evidence": "The explanation is purely abstract; there are no analogies or concrete examples (e.g., a student memorizing a practice test) to help a beginner."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 2,
+        "evidence": "Visuals are limited to text labels. For a concept like overfitting, a visual graph showing a model 'chasing noise' would be much more effective than text [00:05]."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 4,
+        "evidence": "The composition is clean, the text is highly legible, and the captions are well-placed [00:10]."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 2,
+        "evidence": "Uses rhetorical questions at [00:00] and [00:18] but does not provide pauses or prompts for the learner to reflect."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 1,
+        "evidence": "There are no invitations for the learner to perform any generative tasks."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 2,
+        "evidence": "Introduces 'regularization' [00:23] and 'multicollinearity' [00:31] without any explanation, which is inappropriate for a non-CS major."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 2,
+        "evidence": "The video assumes the learner understands 'training data' and 'test data' [00:05], which are listed as 'Lacks' for this persona."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 2,
+        "evidence": "The pace is too fast for the complexity of the terms introduced; a non-CS major would likely need to pause and Google every term mentioned in the second half."
+      }
+    }
+  },
+  "tri_low_1": {
+    "dims": {
+      "accuracy": 2.33,
+      "logic": 2.0,
+      "adaptability": 3.67,
+      "engagement": 3.5
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5,
+        "evidence": "The geometric construction of the altitudes and the resulting orthocenter [00:01-00:55] is mathematically precise and accurate for the triangle shown."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 1,
+        "evidence": "The video title 'Comparing Triangle Centers' is not addressed; the content is limited exclusively to the orthocenter [00:00-00:55], failing to cover the centroid, incenter, or circumcenter."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 2,
+        "evidence": "[00:00] Only one specific acute triangle is used; no analogies or varied examples are provided."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 5,
+        "evidence": "[00:05] The dynamic movement of the compass reveals the 'how' of the construction in a way static text cannot."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3,
+        "evidence": "[00:45] While clean initially, the final composition is quite cluttered with overlapping geometric artifacts."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 1,
+        "evidence": "[00:00-01:00] No questions or prompts are posed to the learner."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 1,
+        "evidence": "[00:00-01:00] The learner is not invited to draw along or predict where the next line will fall."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 4,
+        "evidence": "[00:26] Uses 'altitude' and [00:57] 'orthocenter' correctly for a 9th-grade geometry context."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 4,
+        "evidence": "[00:12] Correcty assumes the student understands the basic mechanics of a compass for bisecting segments."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3,
+        "evidence": "[00:35] The time-lapse of the second and third constructions is slightly too fast for a student who lacks the ability to easily apply concepts in new contexts."
+      }
+    }
+  },
+  "bad_mei_2": {
+    "dims": {
+      "accuracy": 2.0,
+      "logic": 3.0,
+      "adaptability": 2.0,
+      "engagement": 3.4
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 2,
+        "evidence": "At [00:09], the narrator states that 'DNA in the chromatin replicates' during Prophase I, whereas replication occurs during the S-phase of Interphase. Additionally, a typo 'Tedrad' appears on-screen at [00:25]."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 2,
+        "evidence": "The video title is 'Cell Division and Meiosis', but the content is exclusively limited to Prophase I [00:00-00:39], failing to cover the rest of the meiotic stages or general cell division (mitosis)."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 1,
+        "evidence": "[00:00-00:49] No analogies or real-world examples are used; the explanation remains entirely abstract and biological."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 4,
+        "evidence": "[00:22] The visual of the chromosomes 'coupling up' (synapsis) makes the concept much clearer than the technical term alone."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3,
+        "evidence": "[00:25] While the CGI is professional, the misspelling of 'Tetrad' as 'Tedrad' is a significant design flaw for an educational video."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 1,
+        "evidence": "[00:00-00:49] There are no questions or prompts for the learner to think or respond."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 1,
+        "evidence": "[00:00-00:49] The video does not ask the student to perform any actions or predictions."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 2,
+        "evidence": "[00:24] Terms like 'Synapsis' and 'Tetrad' are introduced without any plain-language scaffolding for a 7th grader."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 2,
+        "evidence": "[00:02] Assumes the student understands 'diploid' and [00:33] 'alleles', both of which are listed as 'Lacks' or beyond the persona's background."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 2,
+        "evidence": "[00:00-00:49] The information density is too high for a 15-minute focus session; a 7th grader would likely feel overwhelmed by the speed of new concepts."
+      }
+    }
+  },
+  "phys_mid_c": {
+    "dims": {
+      "accuracy": 4.33,
+      "logic": 3.75,
+      "adaptability": 5.0,
+      "engagement": 3.4
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 4,
+        "evidence": "The algebraic derivation and on-screen diagrams are factually accurate [02:25-05:15], though a minor verbal slip occurs at [00:31] where the instructor says 'around the planet' instead of 'around the star'."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 4,
+        "evidence": "The video covers the specific mechanics of circular orbits and the derivation of Kepler's Third Law thoroughly [00:00-05:15]."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 2,
+        "evidence": "[00:10] Uses only the standard planet-star model; lacks any analogies or alternative representations to build physical intuition."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 3,
+        "evidence": "[00:05] The initial diagram establishes the spatial relationship, but the rest of the video relies on symbolic manipulation rather than visual mechanisms."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 4,
+        "evidence": "Clean grid background and high-contrast handwriting make the text very easy to read on any screen size."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 1,
+        "evidence": "The video is entirely passive; there are no prompts for the learner to pause or check understanding."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 1,
+        "evidence": "No invitations to predict the next algebraic step or attempt the rearrangement independently."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 5,
+        "evidence": "[00:40] Correctly uses terms like 'eccentricity' and 'centripetal' which are appropriate for a 1st-year university student."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 5,
+        "evidence": "[01:00] Correctly assumes the student knows the Universal Law of Gravitation and centripetal force formulas, as noted in the persona's background."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 5,
+        "evidence": "The 5:47 duration fits perfectly within the 6-minute focus time while covering the entire derivation at a digestible speed."
+      }
+    }
+  },
+  "golden": {
+    "dims": {
+      "accuracy": 5.0,
+      "logic": 4.75,
+      "adaptability": 5.0,
+      "engagement": 4.6
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5,
+        "evidence": "The U-shaped test error curve and the relationship between complexity and training error [02:20] are factually precise and standard for the field."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 5,
+        "evidence": "Goes beyond the basic definitions of over/underfitting to include advanced diagnostic tools like learning curves [05:47] and the bias-variance trade-off [05:20]."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 5,
+        "evidence": "The central analogy of a student 'bombing the real test' (00:00 and 04:30) is a masterclass in making abstract ML theory intuitive for a university student."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 5,
+        "evidence": "The U-shaped error curve at 02:20 and the balance scale at 05:22 carry the entire conceptual weight of the lesson; the words explain the visuals, rather than the visuals merely decorating the words."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 4,
+        "evidence": "The design is clean, consistent, and highly legible. While the character art has a slightly generic AI aesthetic, the technical diagrams are polished and professional."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 4,
+        "evidence": "06:36 presents a clear 'Which failure mode is this?' quiz with specific data points (99% vs 65%) for the learner to evaluate."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 3,
+        "evidence": "At 06:45, the narrator asks 'What would you change about the model?', though it doesn't explicitly prompt the user to pause and write it down."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 5,
+        "evidence": "Terms like 'Generalization' (01:45) and 'Complexity' (01:55) are defined immediately upon introduction using simple, non-technical language."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 5,
+        "evidence": "The video leverages the persona's knowledge of polynomials (02:05) to explain model complexity, avoiding any assumption of prior ML or statistics knowledge."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 5,
+        "evidence": "The information density is high, but because the video is only 7 minutes long, it fits perfectly within the 20-minute focus budget, allowing for a second viewing if needed."
+      }
+    }
+  },
+  "mid_tri_a": {
+    "dims": {
+      "accuracy": 5.0,
+      "logic": 4.38,
+      "adaptability": 4.0,
+      "engagement": 4.0
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5,
+        "evidence": "The video correctly presents the centroid coordinate formula at [02:05], the incenter formula at [06:30], and the circumradius formula R = abc / 4Area at [09:50]. Presentation analysis confirms high mathematical precision in diagrams."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 5,
+        "evidence": "Goes beyond the basic comparison of centers to include advanced geometric concepts such as the Euler Line [13:26] and the Nine-Point Circle [13:48]."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 4,
+        "evidence": "Uses strong real-world applications like fire station placement for incenters [08:08] and satellite orbits for circumcenters [11:35]."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 5,
+        "evidence": "The visuals do the heavy lifting, especially showing how altitudes must be extended outside an obtuse triangle to find the orthocenter [14:10]."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 5,
+        "evidence": "Clean, high-contrast geometric vectors and legible mathematical notation throughout."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 1,
+        "evidence": "The video is entirely passive; it presents problems and solves them immediately without asking the viewer to think first."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 1,
+        "evidence": "No prompts for the student to 'try it yourself' or 'pause and draw' before the solution is revealed."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 4,
+        "evidence": "Terms like 'equidistant' and 'concurrent' are used appropriately for 9th grade and reinforced with visual cues."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 5,
+        "evidence": "The video scaffolds the persona's weakness in 'comparing concepts' by explicitly showing how centers behave in different triangle types (Acute/Right/Obtuse)."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3,
+        "evidence": "While the segmenting is good, the total volume of information is very high for a 15-minute focus window, likely requiring multiple viewings."
+      }
+    }
+  },
+  "mid_mei_b": {
+    "dims": {
+      "accuracy": 5.0,
+      "logic": 3.88,
+      "adaptability": 3.33,
+      "engagement": 3.5
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5,
+        "evidence": "The comparison table at [05:12] and the organelle function table at [01:49] are factually accurate and align with standard biological curriculum."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 5,
+        "evidence": "The video goes beyond the title by providing a detailed breakdown of cell organelles [01:49] and a comprehensive comparison between mitosis and meiosis [05:12]."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 5,
+        "evidence": "Uses three strong analogies: the City (01:22), the Photocopier (03:20), and the Shuffler (04:30)."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 2,
+        "evidence": "Visuals are primarily static text and icons. At 03:45, the 'dance' of mitosis is described but not shown, missing a key opportunity for visual explanation."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 4,
+        "evidence": "Clean, professional typography and consistent color coding. The 'V Tutor' branding is present but not intrusive."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 2,
+        "evidence": "Includes rhetorical questions at 02:40 and 05:50, but provides no pauses or prompts for the learner to actually reflect or answer."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 1,
+        "evidence": "The video is entirely passive; there are no invitations to draw, predict, or summarize."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3,
+        "evidence": "While it defines 'Mitosis' and 'Meiosis' well, it introduces 'Prophase/Metaphase/Anaphase/Telophase' (03:38) without sufficient scaffolding for a 7th grader."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 3,
+        "evidence": "Assumes the learner can conceptualize 'chromosomes condensing' (03:42) without having previously defined what a chromosome looks like or is made of."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 4,
+        "evidence": "The overall duration is ideal for the persona's focus time, though the mitosis stage breakdown is slightly too dense for a first-time learner."
+      }
+    }
+  },
+  "phys_good_a": {
+    "dims": {
+      "accuracy": 4.67,
+      "logic": 4.5,
+      "adaptability": 5.0,
+      "engagement": 4.6
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5,
+        "evidence": "The mathematical derivation of velocity proportionality v ∝ 1/√R at [03:01] is factually accurate and the planetary animations correctly depict relative orbital speeds [02:03]."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 4,
+        "evidence": "Covers circular orbits [00:36], orbital periods [01:06], and Kepler's Third Law [02:22], which is a rich extension of the 'Circular Motion' title."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 5,
+        "evidence": "The hyperbolic funnel [00:18] is an excellent physical analogy for a gravitational potential well, making the relationship between distance and speed visible."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 5,
+        "evidence": "The visual of the inner ball 'lapping' the outer ball at [01:45] provides the 'aha' moment for the relationship between radius and orbital period."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 4,
+        "evidence": "Clean typography and high-contrast overlays. The math is legible and well-spaced [03:10]."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 5,
+        "evidence": "Includes a formal multiple-choice question at [01:12] with a dedicated 'STOP' graphic to encourage reflection."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 4,
+        "evidence": "Explicitly instructs the viewer to 'record your vote and explain your reasoning on a piece of paper' at [01:24]."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 5,
+        "evidence": "Uses appropriate terminology like 'semi-major axis' and 'proportionality' [02:25] which fits a 1st-year university level."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 5,
+        "evidence": "Directly addresses the persona's lack of intuition by showing *why* the inner planet must move faster to 'withstand the greater gravity' [01:55]."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 5,
+        "evidence": "The pace is brisk but logical, covering the demo, the quiz, and the math within 3.5 minutes, well under the 6-minute focus limit."
+      }
+    }
+  },
+  "human_overfitting": {
+    "dims": {
+      "accuracy": 5.0,
+      "logic": 4.75,
+      "adaptability": 5.0,
+      "engagement": 4.8
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5,
+        "evidence": "The Error vs. Model Complexity graph at [04:09] correctly depicts the divergence of training and test error, and the Bias-Variance trade-off at [05:51] is accurately simplified for the target level."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 5,
+        "evidence": "Covers all title-implied topics and extends into the underlying causes with the Bias-Variance trade-off at [05:51]."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 5,
+        "evidence": "[00:02] The history test analogy (memorizing typos vs. understanding events) is a perfect entry point for a non-CS student."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 5,
+        "evidence": "[03:02] The side-by-side comparison of the three curves (Underfitting, Good Fit, Overfitting) makes the abstract concept of 'fit' immediately visible."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 5,
+        "evidence": "The typography is clean and high-contrast; the use of dark mode with vibrant accent colors [05:21] ensures high legibility."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 4,
+        "evidence": "[04:52] A 'Quick Challenge' presents a specific scenario (98% vs 55% accuracy) and asks the learner to diagnose it."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 4,
+        "evidence": "[02:45] Explicitly tells the learner to 'Take a second to think about it' before revealing the answer to the detective hiring prompt."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 5,
+        "evidence": "[03:58] Defines 'Generalization' in plain English ('when its test error is close to its training error') before using it as a technical term."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 5,
+        "evidence": "The video correctly identifies that the persona lacks knowledge of training/test splits and builds that concept from scratch using the 'practice problems vs. real exam' analogy [00:58]."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 5,
+        "evidence": "The 7-minute duration is a perfect 'micro-learning' slice that fits well within the 20-minute focus budget, allowing time for the learner to re-watch the graph section if needed."
+      }
+    }
+  },
+  "triangles_AL": {
+    "dims": {
+      "accuracy": 5.0,
+      "logic": 4.75,
+      "adaptability": 5.0,
+      "engagement": 5.0
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5,
+        "evidence": "Geometric constructions for medians, angle bisectors, and perpendicular bisectors are mathematically accurate [00:53-01:32]. The 2:1 centroid ratio is correctly identified [02:55]."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 5,
+        "evidence": "Covers all three major centers, their distance properties, location in obtuse triangles [02:30], and the special case of equilateral triangles [04:19]."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 5,
+        "evidence": "Uses the 'park' analogy [00:01] and the 'fingertip balance' analogy [01:08] to make abstract centers intuitive."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 5,
+        "evidence": "The visual of the circumcenter 'slipping outside' the triangle [02:46] provides a powerful mental model that words alone cannot convey."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 5,
+        "evidence": "Professional, clean digital slides with high-contrast text and smooth animations [04:28]."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 5,
+        "evidence": "Includes explicit 'pause and answer' prompts at [02:43], [03:32], and [05:12]."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 5,
+        "evidence": "Prompts the learner to 'commit to an answer' [02:45] and 'justify it the way we did the others' [06:18]."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 5,
+        "evidence": "Introduces 9th-grade terms like 'equidistant' and 'bisector' with clear visual definitions [01:15, 01:55]."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 5,
+        "evidence": "Correctly assumes the student knows basic triangle parts but provides visual refreshers for medians and bisectors."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 5,
+        "evidence": "The rhythm is deliberate, allowing the student to process the comparison of three similar concepts without overwhelm."
+      }
+    }
+  },
+  "meiosis_AI": {
+    "dims": {
+      "accuracy": 4.0,
+      "logic": 4.5,
+      "adaptability": 5.0,
+      "engagement": 4.8
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5,
+        "evidence": "The diagrams of chromosome replication [02:04] and the explanation of the nucleus as the control center [00:23] are factually precise and well-matched to the target level."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 2,
+        "evidence": "The title explicitly includes 'Meiosis', but the topic is only briefly mentioned at [03:47] as a 'word for later' without explaining its mechanisms, representing a significant coverage gap relative to the title."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 5,
+        "evidence": "The 'Instruction Booklet' analogy (00:47) is used consistently throughout to explain why chromosomes must be copied rather than just divided."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 5,
+        "evidence": "The visual at 02:40 showing the two identical halves of the 'X' being pulled to opposite sides carries the primary explanatory load of the lesson."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 5,
+        "evidence": "Clean, professional 2D illustrations with high legibility and no generic AI-style clutter."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 4,
+        "evidence": "Includes a specific 'What if it skipped copying?' question at 04:24 with a prompt to think."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 4,
+        "evidence": "Explicitly asks the learner to 'pause and think' and 'predict the result' at 04:15."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 5,
+        "evidence": "Introduces 'chromosomes' (00:36) and 'meiosis' (04:03) without overwhelming the student with terms like 'centromere' or 'chromatid'."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 5,
+        "evidence": "Correctly assumes the student knows cells split but doesn't know the internal mechanics; stays entirely within the persona's reach."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 5,
+        "evidence": "The information density is perfectly calibrated for a 7th grader, providing enough repetition of the 'copy then split' concept to ensure retention."
+      }
+    }
+  }
+}

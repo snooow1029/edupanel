@@ -1,0 +1,8 @@
+# --- backbone SDKs (install at least the one you use) ---
+google-genai>=0.3.0      # VIBE_TEACH_VLM_PROVIDER=gemini (default)
+openai>=1.40.0           # VIBE_TEACH_VLM_PROVIDER=gpt
+anthropic>=0.34.0        # VIBE_TEACH_VLM_PROVIDER=claude
+
+# --- video handling ---
+# ffmpeg / ffprobe must be on PATH (used to sample frames for claude/gpt)
+yt-dlp                   # only if you feed YouTube URLs instead of local files

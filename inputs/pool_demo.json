@@ -1,0 +1,124 @@
+{
+  "videos": [
+    {
+      "video_url": "demo_videos/bad_mei_2.mp4",
+      "title": "bad_mei_2",
+      "course_requirement": "Big Concept: Heredity Topic: Cell Division and Meiosis Bloom's Taxonomy: understand Learning Goal: 1. Understand that cells can divide. 2. Recognize that chromosomes change during cell division.  3. Know that chromosomes replicate and are equally distributed during cell division. 4. Understand that cell division is related to growth and reproduction in living things. Key Learning Points: 1. Cell division  2. Chromosome changes during division 3. Chromosome replication  4. Equal distribution of chromosomes Note: Understand: Understand the basic idea of cell division and chromosome changes during the process.",
+      "personas": [
+        {
+          "student_persona": "Grade: 7th grade | Focus Time: 15 minutes | Background Knowledge: Has: everyday ideas that living things grow and are made of cells; rough sense that cells can split. Lacks: chromosome structure vocabulary; mitosis vs meiosis; technical labels beyond plain-language cell division. Learning target for this clip: introductory cell division and chromosome copy/segregation as in the video learning goals (not a meiosis deep dive)."
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/bad_over_3.mp4",
+      "title": "bad_over_3",
+      "course_requirement": "Big Concept: Data Science and Machine Learning Topic: Overfitting vs. Underfitting: Why the Best Model Is Not Always the Most Complex Bloom's Taxonomy: remember, understand Learning Goal: Deliver a clear lecture explaining the concepts of overfitting and underfitting. Please visually guide the students through the 'training and test error versus model complexity' curves, explicitly identifying where the underfitting region, the optimal 'sweet spot', and the overfitting regions lie on the graph. To ensure the concepts are intuitive, seamlessly integrate a relatable real-world analogy (think an interesting one yourself) alongside a concrete machine learning example. Key Learning Points: Training error vs. test error; generalization; model complexity; bias-variance trade-off (conceptual); learning curves; overfitting signs (train acc ? test acc); underfitting signs (both low)",
+      "personas": [
+        {
+          "student_persona": "Grade: 1st-year university student, non-CS majorFocus Time: 20 minutesBackground Knowledge: Has: basic algebra, polynomial functions concept; has heard of ML. Lacks: No ML experience; no training/testing splits; never seen a learning curve or heard of overfitting."
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/golden.mp4",
+      "title": "AI_overfitting",
+      "course_requirement": "Big Concept: Data Science and Machine Learning Topic: Overfitting vs. Underfitting: Why the Best Model Is Not Always the Most Complex Bloom's Taxonomy: remember, understand Learning Goal: Deliver a clear lecture explaining the concepts of overfitting and underfitting. Please visually guide the students through the 'training and test error versus model complexity' curves, explicitly identifying where the underfitting region, the optimal 'sweet spot', and the overfitting regions lie on the graph. To ensure the concepts are intuitive, seamlessly integrate a relatable real-world analogy (think an interesting one yourself) alongside a concrete machine learning example. Key Learning Points: Training error vs. test error; generalization; model complexity; bias-variance trade-off (conceptual); learning curves; overfitting signs (train acc ? test acc); underfitting signs (both low)",
+      "personas": [
+        {
+          "student_persona": "Grade: 1st-year university student, non-CS majorFocus Time: 20 minutesBackground Knowledge: Has: basic algebra, polynomial functions concept; has heard of ML. Lacks: No ML experience; no training/testing splits; never seen a learning curve or heard of overfitting."
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/human_overfitting.mp4",
+      "title": "human_over_1",
+      "course_requirement": "Big Concept: Data Science and Machine Learning Topic: Overfitting vs. Underfitting: Why the Best Model Is Not Always the Most Complex Bloom's Taxonomy: remember, understand Learning Goal: Deliver a clear lecture explaining the concepts of overfitting and underfitting. Please visually guide the students through the 'training and test error versus model complexity' curves, explicitly identifying where the underfitting region, the optimal 'sweet spot', and the overfitting regions lie on the graph. To ensure the concepts are intuitive, seamlessly integrate a relatable real-world analogy (think an interesting one yourself) alongside a concrete machine learning example. Key Learning Points: Training error vs. test error; generalization; model complexity; bias-variance trade-off (conceptual); learning curves; overfitting signs (train acc ? test acc); underfitting signs (both low)",
+      "personas": [
+        {
+          "student_persona": "Grade: 1st-year university student, non-CS majorFocus Time: 20 minutesBackground Knowledge: Has: basic algebra, polynomial functions concept; has heard of ML. Lacks: No ML experience; no training/testing splits; never seen a learning curve or heard of overfitting."
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/meiosis_AI.mp4",
+      "title": "AI_meiosis",
+      "course_requirement": "Big Concept: Heredity Topic: Cell Division and Meiosis Bloom's Taxonomy: understand Learning Goal: 1. Understand that cells can divide. 2. Recognize that chromosomes change during cell division.  3. Know that chromosomes replicate and are equally distributed during cell division. 4. Understand that cell division is related to growth and reproduction in living things. Key Learning Points: 1. Cell division  2. Chromosome changes during division 3. Chromosome replication  4. Equal distribution of chromosomes Note: Understand: Understand the basic idea of cell division and chromosome changes during the process.",
+      "personas": [
+        {
+          "student_persona": "Grade: 7th grade | Focus Time: 15 minutes | Background Knowledge: Has: everyday ideas that living things grow and are made of cells; rough sense that cells can split. Lacks: chromosome structure vocabulary; mitosis vs meiosis; technical labels beyond plain-language cell division. Learning target for this clip: introductory cell division and chromosome copy/segregation as in the video learning goals (not a meiosis deep dive)."
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/mid_mei_b.mp4",
+      "title": "mid_mei_b",
+      "course_requirement": "Big Concept: Heredity Topic: Cell Division and Meiosis Bloom's Taxonomy: understand Learning Goal: 1. Understand that cells can divide. 2. Recognize that chromosomes change during cell division.  3. Know that chromosomes replicate and are equally distributed during cell division. 4. Understand that cell division is related to growth and reproduction in living things. Key Learning Points: 1. Cell division  2. Chromosome changes during division 3. Chromosome replication  4. Equal distribution of chromosomes Note: Understand: Understand the basic idea of cell division and chromosome changes during the process.",
+      "personas": [
+        {
+          "student_persona": "Grade: 7th grade | Focus Time: 15 minutes | Background Knowledge: Has: everyday ideas that living things grow and are made of cells; rough sense that cells can split. Lacks: chromosome structure vocabulary; mitosis vs meiosis; technical labels beyond plain-language cell division. Learning target for this clip: introductory cell division and chromosome copy/segregation as in the video learning goals (not a meiosis deep dive)."
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/mid_tri_a.mp4",
+      "title": "mid_tri_a",
+      "course_requirement": "Big Concept: Triangle Centers Topic: Comparing Triangle Centers in Different Contexts Bloom's Taxonomy: analyze, evaluate Learning Goal: Analyze: Compare centroid, incenter, and circumcenter Evaluate: Determine the most appropriate center in different scenarios and justify the reasoning Key Learning Points: Properties of centroid, incenter, and circumcenter Distance relationships (to sides vs vertices) Functional differences of triangle centers",
+      "personas": [
+        {
+          "student_persona": "Grade: 9th gradeFocus Time: 15 minutesBackground Knowledge: Has: basic definitions of triangle centersLacks: ability to compare and apply concepts in different contexts"
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/phys_good_a.mp4",
+      "title": "phys_good_a",
+      "course_requirement": "Big Concept: Force and Translational Dynamics Topic: Circular Motion Bloom's Taxonomy: understand Learning Goal: Deliver a clear explanation of circular orbits using Kepler’s third law. Help students understand how gravitational force provides the centripetal acceleration required for circular motion, and how the orbital period depends on the radius and the mass of the central body. Use intuitive explanations and simple examples (e.g., planets orbiting the Sun or satellites around Earth) to illustrate how changing radius or mass affects the orbit. Key Learning Points: centripetal acceleration from gravity; circular orbit conditions; relationship between orbital period and radius; dependence on central mass; qualitative understanding of Kepler’s third law",
+      "personas": [
+        {
+          "student_persona": "Grade: 1st-year university student Focus Time: 6 minutes Background Knowledge: Has: Solid understanding of Newtonian mechanics, including centripetal force and gravitational force. Familiar with Kepler’s third law formula and can manipulate equations. Lacks: Intuitive connection between the mathematical form of Kepler’s law and physical interpretation (e.g., how orbital radius and central mass jointly determine period in real systems)."
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/phys_mid_c.mp4",
+      "title": "phys_mid_c",
+      "course_requirement": "Big Concept: Force and Translational Dynamics Topic: Circular Motion Bloom's Taxonomy: understand Learning Goal: Deliver a clear explanation of circular orbits using Kepler’s third law. Help students understand how gravitational force provides the centripetal acceleration required for circular motion, and how the orbital period depends on the radius and the mass of the central body. Use intuitive explanations and simple examples (e.g., planets orbiting the Sun or satellites around Earth) to illustrate how changing radius or mass affects the orbit. Key Learning Points: centripetal acceleration from gravity; circular orbit conditions; relationship between orbital period and radius; dependence on central mass; qualitative understanding of Kepler’s third law",
+      "personas": [
+        {
+          "student_persona": "Grade: 1st-year university student Focus Time: 6 minutes Background Knowledge: Has: Solid understanding of Newtonian mechanics, including centripetal force and gravitational force. Familiar with Kepler’s third law formula and can manipulate equations. Lacks: Intuitive connection between the mathematical form of Kepler’s law and physical interpretation (e.g., how orbital radius and central mass jointly determine period in real systems)."
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/phys_slop_1.mp4",
+      "title": "phys_slop_1: AIDAC Case Study: Kepler 3rd Law (AI slop, 57 views)",
+      "course_requirement": "Big Concept: Force and Translational Dynamics Topic: Circular Motion Bloom's Taxonomy: understand Learning Goal: Deliver a clear explanation of circular orbits using Kepler’s third law. Help students understand how gravitational force provides the centripetal acceleration required for circular motion, and how the orbital period depends on the radius and the mass of the central body. Use intuitive explanations and simple examples (e.g., planets orbiting the Sun or satellites around Earth) to illustrate how changing radius or mass affects the orbit. Key Learning Points: centripetal acceleration from gravity; circular orbit conditions; relationship between orbital period and radius; dependence on central mass; qualitative understanding of Kepler’s third law",
+      "personas": [
+        {
+          "student_persona": "Grade: 1st-year university student Focus Time: 6 minutes Background Knowledge: Has: Solid understanding of Newtonian mechanics, including centripetal force and gravitational force. Familiar with Kepler’s third law formula and can manipulate equations. Lacks: Intuitive connection between the mathematical form of Kepler’s law and physical interpretation (e.g., how orbital radius and central mass jointly determine period in real systems)."
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/tri_low_1.mp4",
+      "title": "tri_low_1",
+      "course_requirement": "Big Concept: Triangle Centers Topic: Comparing Triangle Centers in Different Contexts Bloom's Taxonomy: analyze, evaluate Learning Goal: Analyze: Compare centroid, incenter, and circumcenter Evaluate: Determine the most appropriate center in different scenarios and justify the reasoning Key Learning Points: Properties of centroid, incenter, and circumcenter Distance relationships (to sides vs vertices) Functional differences of triangle centers",
+      "personas": [
+        {
+          "student_persona": "Grade: 9th gradeFocus Time: 15 minutesBackground Knowledge: Has: basic definitions of triangle centersLacks: ability to compare and apply concepts in different contexts"
+        }
+      ]
+    },
+    {
+      "video_url": "demo_videos/triangles_AL.mp4",
+      "title": "AI_triangles_AL",
+      "course_requirement": "Big Concept: Triangle Centers Topic: Comparing Triangle Centers in Different Contexts Bloom's Taxonomy: analyze, evaluate Learning Goal: Analyze: Compare centroid, incenter, and circumcenter Evaluate: Determine the most appropriate center in different scenarios and justify the reasoning Key Learning Points: Properties of centroid, incenter, and circumcenter Distance relationships (to sides vs vertices) Functional differences of triangle centers",
+      "personas": [
+        {
+          "student_persona": "Grade: 9th gradeFocus Time: 15 minutesBackground Knowledge: Has: basic definitions of triangle centersLacks: ability to compare and apply concepts in different contexts"
+        }
+      ]
+    }
+  ]
+}

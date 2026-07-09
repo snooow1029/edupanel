@@ -1,0 +1,287 @@
+{
+  "criteria_version": "v2.0",
+  "dimension_scores": {
+    "accuracy": 2.0,
+    "logic": 2.12,
+    "adaptability": 2.33,
+    "engagement": 3.2
+  },
+  "metric_scores": {
+    "A1_factual_accuracy": {
+      "score": 3,
+      "dimension": "A",
+      "tm_dim": "accuracy",
+      "evidence": "The definition of overfitting [00:00] and the list of mitigation techniques like regularization and dropout [00:18] are factually accurate. On-screen text-based figures and labels were checked and found to be correct representations of the concepts mentioned."
+    },
+    "A2_topic_coverage": {
+      "score": 1,
+      "dimension": "A",
+      "tm_dim": "accuracy",
+      "evidence": "The video fails to cover 'Underfitting' entirely [00:00-00:35], despite it being a primary subject in the title 'Overfitting vs. Underfitting'."
+    },
+    "A3_logical_structure": {
+      "score": 3,
+      "dimension": "A",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The sequence is logical: it defines the problem [00:00], provides solutions [00:18], and concludes with a production warning [00:35]."
+    },
+    "A4_learning_objectives": {
+      "score": 1,
+      "dimension": "A",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The video lacks any explicit statement of learning objectives or a 'what you will learn' framing at the beginning [00:00]."
+    },
+    "A5_curriculum_completeness": {
+      "score": 2,
+      "dimension": "A",
+      "tm_dim": "accuracy",
+      "evidence": "The video misses 4 out of 7 key learning points: model complexity, bias-variance trade-off, learning curves, and underfitting signs. It only covers training/test error [00:05], generalization [00:10], and overfitting signs [00:08]."
+    },
+    "A6_bloom_alignment": {
+      "score": 3,
+      "dimension": "A",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The content is appropriately pitched at the 'remember' and 'understand' levels through definitions and lists, though it lacks the visual depth (learning curves) that would fully support the 'understand' level."
+    },
+    "B1_signaling": {
+      "score": 3,
+      "dimension": "B",
+      "tm_dim": "engagement",
+      "evidence": "Uses text overlays at [00:00] and [00:18] to signal the main topic and the transition to solutions."
+    },
+    "B2_segmenting": {
+      "score": 3,
+      "dimension": "B",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The video is naturally segmented into 'Definition' and 'Solutions' by the text headers."
+    },
+    "B3_coherence": {
+      "score": 5,
+      "dimension": "B",
+      "tm_dim": "engagement",
+      "evidence": "Completely free of distractions; the speaker stays strictly on topic with no decorative fluff."
+    },
+    "B4_modality_integration": {
+      "score": 4,
+      "dimension": "B",
+      "tm_dim": "engagement",
+      "evidence": "The on-screen text perfectly synchronizes with the spoken words, reinforcing the key questions being answered."
+    },
+    "C1_examples_analogies": {
+      "score": 1,
+      "dimension": "C",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "No analogies or concrete examples are provided to help a non-technical student grasp the abstract concept."
+    },
+    "C2_scaffolding_strategy": {
+      "score": 2,
+      "dimension": "C",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "While it defines terms, it lacks a bridge from known concepts and fails to provide the requested analogy to motivate the intuition behind the definitions [00:00-00:35]."
+    },
+    "C3_conceptual_procedural_balance": {
+      "score": 3,
+      "dimension": "C",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "The video maintains a conceptual focus as intended, though the lack of any procedural context for the mentioned solutions (like regularization) makes the explanation thin [00:18]."
+    },
+    "C4_visual_explanation_power": {
+      "score": 2,
+      "dimension": "C",
+      "tm_dim": "engagement",
+      "evidence": "Visuals are purely decorative text; they do not show a graph or a model, which would be essential for explaining 'fitting' to a beginner."
+    },
+    "D1_speaker_delivery": {
+      "score": 4,
+      "dimension": "D",
+      "tm_dim": "engagement",
+      "evidence": "The speaker is confident, fluent, and uses natural hand gestures to emphasize points."
+    },
+    "D2_visual_design": {
+      "score": 4,
+      "dimension": "D",
+      "tm_dim": "engagement",
+      "evidence": "The text overlays are clean, high-contrast, and easy to read against the background."
+    },
+    "D3_narrative_and_learner_agency": {
+      "score": 3,
+      "dimension": "D",
+      "tm_dim": "engagement",
+      "evidence": "Uses a question-based hook at [00:01], though the learner remains a passive recipient of a list of facts."
+    },
+    "D4_audio_production": {
+      "score": 5,
+      "dimension": "D",
+      "tm_dim": "engagement",
+      "evidence": "Audio is crisp and consistent throughout the entire clip."
+    },
+    "E1_embedded_questions": {
+      "score": 1,
+      "dimension": "E",
+      "tm_dim": "engagement",
+      "evidence": "The questions asked are rhetorical; there are no pauses or prompts for the learner to reflect."
+    },
+    "E2_generative_prompts": {
+      "score": 1,
+      "dimension": "E",
+      "tm_dim": "engagement",
+      "evidence": "No prompts for the learner to summarize or apply the information."
+    },
+    "E3_worked_examples": {
+      "score": 1,
+      "dimension": "E",
+      "tm_dim": "pedagogical_logic",
+      "evidence": "There are no worked examples or concrete data scenarios provided to illustrate the concepts [00:00-00:35]."
+    },
+    "F1_vocabulary_appropriateness": {
+      "score": 2,
+      "dimension": "F",
+      "tm_dim": "adaptation",
+      "evidence": "Uses advanced terms like 'Multicollinearity' [00:30] and 'Dropout layers' [00:26] which are far beyond a 1st-year non-CS major's level."
+    },
+    "F2_prerequisite_awareness": {
+      "score": 2,
+      "dimension": "F",
+      "tm_dim": "adaptation",
+      "evidence": "Requires understanding of 'training data' vs 'test data' [00:08], which the persona explicitly lacks."
+    },
+    "F3_pacing_fit": {
+      "score": 3,
+      "dimension": "F",
+      "tm_dim": "adaptation",
+      "evidence": "The duration is fine, but the rate at which new, complex terms are introduced is too fast for a beginner to process."
+    }
+  },
+  "agent1_content_analyst": {
+    "teaching_mode": "Conceptual",
+    "content_map": [
+      {
+        "timestamp": "00:00",
+        "topic": "Definition of Overfitting",
+        "detail_level": "Explained",
+        "description": "Defines overfitting as a scenario where a model performs well on training data but poorly on unseen, test, or new data."
+      },
+      {
+        "timestamp": "00:18",
+        "topic": "Methods to Control Overfitting",
+        "detail_level": "Mentioned",
+        "description": "Lists regularization, dropout layers (for neural networks), and checking for multicollinearity (for regression) as mitigation strategies."
+      },
+      {
+        "timestamp": "00:35",
+        "topic": "Deployment Warning",
+        "detail_level": "Mentioned",
+        "description": "Advises against deploying overfitted models into production environments as they destroy prediction accuracy."
+      }
+    ],
+    "potential_issues": [
+      {
+        "timestamp": "00:00",
+        "description": "Title-Content Mismatch: The video title and the specified learning goal promise a comparison between Overfitting and Underfitting. However, the video entirely omits the concept of Underfitting.",
+        "confidence": 0.95,
+        "evidence_type": "Title–Content Mismatch (High Priority)",
+        "category": "accuracy"
+      },
+      {
+        "timestamp": "00:00",
+        "description": "Pedagogical Depth Gap: The learning goal explicitly requires a visual guide through 'training and test error versus model complexity' curves and a relatable analogy. The video provides neither, consisting only of a talking-head explanation with text overlays.",
+        "confidence": 0.95,
+        "evidence_type": "Pedagogical Depth Gap",
+        "category": "accuracy"
+      }
+    ],
+    "presentation_analysis": {
+      "visual_style": "Talking head with dynamic text overlays and background room setting.",
+      "ai_slop_detected": [],
+      "audio_pacing": "Moderate",
+      "audio_transition_audit": {
+        "vocal_consistency": "Consistent throughout the short duration.",
+        "glitches": []
+      },
+      "visual_content_alignment": {
+        "score": "High",
+        "observation": "The on-screen text headers ('What is model overfitting?', 'How to control it?') perfectly track the speaker's transitions between topics."
+      },
+      "on_screen_figure_diagram_correctness": {
+        "score": "High",
+        "observation": "While no complex diagrams are used, the text-based definitions and labels are factually accurate for the concepts mentioned."
+      },
+      "written_text_legibility_audit": {
+        "issues": []
+      }
+    },
+    "written_text_legibility_audit": {
+      "issues": []
+    },
+    "observation_summary": "The video provides a concise and accurate definition of overfitting and lists several standard industry techniques for mitigation. However, it fails significantly against the provided curriculum requirements: it does not mention underfitting, lacks the required visual learning curves, and does not provide the requested analogy or concrete worked example."
+  },
+  "agent2_gap_analysis_judge": {
+    "accuracy_score": 2.0,
+    "logic_score": 2.12,
+    "primary_language": "english",
+    "critical_fact_error_count": 0,
+    "key_learning_points_coverage": {
+      "total": 7,
+      "covered": 3,
+      "missing": [
+        "Model complexity",
+        "Bias-variance trade-off (conceptual)",
+        "Learning curves",
+        "Underfitting signs (both low)"
+      ]
+    },
+    "verified_errors": [
+      {
+        "timestamp": "00:00",
+        "type": "logic",
+        "severity": "critical",
+        "description": "Title-Content Mismatch: The video title promises a comparison between Overfitting and Underfitting, but Underfitting is never mentioned."
+      }
+    ],
+    "scoring_rationale": "The video is factually accurate in what it does present, and on-screen text figures are correct. However, it suffers from a severe scope failure, omitting 'Underfitting' entirely despite the title. It also fails to meet the curriculum requirements for visual learning curves and analogies, resulting in low scores for coverage and completeness."
+  },
+  "subjective_evaluation": {
+    "adaptability": {
+      "score": 2.33
+    },
+    "engagement": {
+      "score": 3.2
+    },
+    "experiential_context": {
+      "pacing_analysis": "The video is extremely brief (under 1 minute), which fits the 20-minute focus time easily. However, the information density is too high for a beginner; it lists complex solutions like 'regularization' and 'multicollinearity' in rapid succession without explanation.",
+      "delivery_assessment": "The speaker is fluent, expressive, and maintains good eye contact. The audio is clear with no noticeable artifacts or robotic transitions.",
+      "visual_assessment": "Visuals are limited to text overlays. While legible and well-timed, they do not provide any explanatory power (e.g., no graphs or diagrams of data points), which is a missed opportunity for a non-CS major.",
+      "cognitive_friction_points": [
+        {
+          "timestamp": "00:08",
+          "issue": "Assumed knowledge of data splits",
+          "reason": "The persona specifically lacks knowledge of training/testing splits, but the definition of overfitting relies entirely on understanding these terms."
+        },
+        {
+          "timestamp": "00:23",
+          "issue": "Jargon overload",
+          "reason": "Terms like 'regularization', 'dropout layers', and 'multicollinearity' are introduced without any definition, which will alienate a non-CS major."
+        }
+      ],
+      "positive_moment": {
+        "timestamp": "00:18",
+        "what_works": "The use of a clear on-screen header 'How to control it?' provides a strong signal for the transition to the next sub-topic."
+      }
+    },
+    "top_fix_suggestion": "Include a simple visual analogy, such as a student 'memorizing' specific practice exam answers instead of 'learning' the underlying concepts, accompanied by a basic graph showing a line over-complicating a set of data points."
+  },
+  "_meta": {
+    "video_url": "/home/zzz9447/Classroom_dev/AI_student/phase_2/deploy/videos/bad_over_3.mp4",
+    "title_en": "Overfitting vs. Underfitting: Why the Best Model Is Not Always the Most Complex",
+    "big_concept": "Data Science and Machine Learning",
+    "blooms_level": "remember, understand",
+    "learning_goal": "Deliver a clear lecture explaining the concepts of overfitting and underfitting. Please visually guide the students through the 'training and test error versus model complexity' curves, explicitly identifying where the underfitting region, the optimal 'sweet spot', and the overfitting regions lie on the graph. To ensure the concepts are intuitive, seamlessly integrate a relatable real-world analogy (think an interesting one yourself) alongside a concrete machine learning example.",
+    "key_learning_points": "Training error vs. test error; generalization; model complexity; bias-variance trade-off (conceptual); learning curves; overfitting signs (train acc ? test acc); underfitting signs (both low)",
+    "student_persona": "Grade: 1st-year university student, non-CS major | Focus Time: 20 minutes | Background Knowledge: Has: basic algebra, polynomial functions concept; has heard of ML. Lacks: No ML experience; no training/testing splits; never seen a learning curve or heard of overfitting.",
+    "timestamp": "20260702_084538",
+    "task_index": 2,
+    "run_id": 1,
+    "total_runs": 3,
+    "agent3_text_only": false
+  }
+}

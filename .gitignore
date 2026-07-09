@@ -1,0 +1,12 @@
+# secrets
+config/.env
+
+# runtime scratch
+temp_videos/
+batch_work/
+eval_results/
+__pycache__/
+*.pyc
+
+# large media — uncomment if you don't want the demo videos in git history
+# demo_videos/

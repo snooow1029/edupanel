@@ -1,0 +1,1334 @@
+{
+  "bad_over_3": {
+    "dims": {
+      "accuracy": 2.44,
+      "logic": 2.83,
+      "adaptability": 3.56,
+      "engagement": 2.87
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "[00:07] Definition: '...doing good on the training but not doing good on unseen data' — correct high-level definition of overfitting. [00:44] Recommendation: 'you can check for multicollinearity ... get rid of' — presented as a general remedy (overgeneralization). Presentation_analysis: no instructional figures/plots shown (on_screen_figure_diagram_correctness = High), so no figure errors were found on-screen."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 2.0,
+        "score_runs": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evidence": "Title implies comparison of overfitting vs underfitting and complexity curves, but underfitting and model-complexity/learning-curve material are missing: curriculum checklist shows model complexity, bias-variance, learning curves, and underfitting not covered (see absence ~[00:07], no further timestamps)."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The presenter gives a concrete, plain-language example contrast ('good on the training but not good on unseen/test/new data' at 00:12) which helps intuition, but the video does not use extended analogies or multiple varied examples."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 2.33,
+        "score_runs": [
+          2.0,
+          3.0,
+          2.0
+        ],
+        "evidence": "Visuals are limited to text captions and section banners; there are no diagrams, plotted learning curves, or before/after model illustrations that would show how overfitting looks visually (absence apparent at 00:12 and again when remedies are discussed from 00:28 onward)."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.67,
+        "score_runs": [
+          4.0,
+          3.0,
+          4.0
+        ],
+        "evidence": "High-contrast, large captions and consistent red banners create a clean, legible design (visible throughout, e.g., 00:02 and 00:28). Composition is uncluttered and readable on a small screen."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 2.0,
+        "score_runs": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evidence": "The video opens with a rhetorical prompt 'Do you know' (00:02), but it does not pause or leave time for the viewer to answer; there are no true embedded questions that invite reflection."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 1.0,
+        "score_runs": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "evidence": "No generative tasks or 'try this' prompts are present — the presenter lists fixes (regularization, dropout, check multicollinearity) but does not ask the viewer to predict, sketch, or try anything (remedy listing at 00:34–00:48)."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Key terms are introduced at a generally appropriate level for a first-year non-CS student (the concept of 'overfitting' is defined in plain language at 00:12), but some jargon like 'regularization', 'dropout', and 'multicollinearity' are named without short definitions (00:34–00:48)."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 3.67,
+        "score_runs": [
+          4.0,
+          3.0,
+          4.0
+        ],
+        "evidence": "The video stays mostly within the persona's background: it defines the crucial contrast between training and unseen/test data (00:12) instead of assuming familiarity with train/test splits. It does introduce some methods by name (00:34) but does not require prior deep ML knowledge to get the main idea."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 4.0,
+        "score_runs": [
+          4.0,
+          4.0,
+          4.0
+        ],
+        "evidence": "Pacing is brisk but segmented into short, repeatable phrases and two clear chunks; a 20-minute-focus beginner can follow without re-watching (section shifts at ~00:28 and summary/warning at ~00:58)."
+      }
+    },
+    "n_runs": 3
+  },
+  "golden": {
+    "dims": {
+      "accuracy": 5.0,
+      "logic": 4.42,
+      "adaptability": 4.56,
+      "engagement": 4.23
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "Narration and figures are factually correct and consistent with standard ML intuition: train/test split and definitions shown at [00:27]–[00:39] ('training error: how often the model is wrong on examples it was trained on. Test error: how often it's wrong on held-out examples'), the training-error monotone decrease with complexity is shown at [01:20] and the U-shaped test-error behaviour is shown at [01:32]. On-screen diagrams were checked and found correct (presentation_analysis: 'on_screen_figure_diagram_correctness': High)."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "All core topics implied by the title and the curriculum are present: model definition [00:08], train/test split [00:27], training vs test error [00:39], model complexity and polynomial examples [01:05], under/overfitting definitions [01:46]/[01:58], bias–variance concept [03:18], and learning curves [03:36]."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "[00:00–00:30] real‑student exam analogy; [00:40] fruit/vegetable training examples; [01:05] polynomial fits as concrete curve examples — multiple, well-chosen analogies that map to the abstract idea."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "[01:05] degree-1/3/10 plots show exactly how a model's flexibility changes predictions; [02:12] training/test error curves and the gap visualization explain the diagnosis visually, not just verbally."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "[00:30] consistent, uncluttered infographic style; [02:12] legible gauges and labeled axes; typography and spacing are clear throughout."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 4.0,
+        "score_runs": [
+          4.0,
+          4.0,
+          4.0
+        ],
+        "evidence": "[03:00] 'Your turn: Which failure mode is this?' presents a genuine question that asks the viewer to apply the diagnosis rather than just listen."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 3.67,
+        "score_runs": [
+          4.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "[03:00] the 'Your turn' slide invites prediction/diagnosis; earlier analogy prompts the viewer to map a real-world case to the abstract concept (implicit generative thinking)."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 4.67,
+        "score_runs": [
+          5.0,
+          4.0,
+          5.0
+        ],
+        "evidence": "[00:27] 'training error' and 'test error' are defined in plain terms; [01:05] 'degree' is tied to a visual of polynomials and explained as 'wiggliness', which is appropriate for a student with basic algebra familiarity."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "[01:05] the video introduces or visually explains polynomial degree rather than assuming deep prior ML knowledge; basics like 'training/test split' are defined early ([00:27]). This stays within the persona's stated background."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 4.0,
+        "score_runs": [
+          4.0,
+          4.0,
+          4.0
+        ],
+        "evidence": "[00:30] opening pace is gentle and story-driven; [01:10] complexity section speeds up a bit but is supported by clear visuals; overall density fits a 20‑minute focus window without excessive rehashing."
+      }
+    },
+    "n_runs": 3
+  },
+  "bad_mei_2": {
+    "dims": {
+      "accuracy": 3.67,
+      "logic": 3.29,
+      "adaptability": 3.22,
+      "engagement": 3.1
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "On-screen diagrams and labels are scientifically correct: chromatin shown as diffuse then condensing into chromosomes [00:08 → 00:12], sister chromatids annotated on an X-shaped chromosome [00:20], homolog pairing/tetrad labeled and shown [00:26], and crossing-over animation clearly depicts exchange between homologous chromatids [00:33]. Agent 1's on_screen_figure_diagram_correctness also rates figures 'High' and notes they correctly show condensation, sister chromatids, tetrads and crossing over."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          2.0,
+          4.0
+        ],
+        "evidence": "Core topics are present: cell context and diploid start [00:02, 00:05], chromatin→chromosomes→sister chromatids [00:08–00:20], homolog pairing and crossing over [00:26–00:36], and a meiosis I/II schematic [00:38]. However, an explicit statement that meiosis reduces chromosome number (diploid→haploid / reduction division / equal segregation) is omitted or only implied by the schematic [~00:38], leaving that key topic under-explicit."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The video uses multiple visual representations (whole-cell, schematic diagrams, and close-up molecular views) as concrete examples to explain abstract ideas (e.g., schematic summary of meiosis stages at ~01:10). However, there are no everyday analogies (no 'swap puzzle pieces' or similar) visible in the frames."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 3.33,
+        "score_runs": [
+          4.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Animations show mechanisms (chromosomes pairing, sister chromatids, and crossing over at ~01:10) and thus do explanatory work. The crossing-over animation in particular reveals how segments can be exchanged. Still, explanatory captions are minimal and a short narrated explanation would boost understanding."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.33,
+        "score_runs": [
+          4.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Clean layouts, consistent color-coding, and legible fonts (labels visible at ~00:03, 00:25, 00:45). The style is polished but intentionally stylized (glossy 3D), which is attractive yet not photorealistic — meets a professional baseline without being exceptional."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 2.67,
+        "score_runs": [
+          2.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The video contains no explicit pause-and-think questions or quizzes. It is possible for an instructor to pause the clip for questions, but nothing is embedded in the clip itself (whole clip, e.g., 00:00–02:10)."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 2.67,
+        "score_runs": [
+          2.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "No prompts asking viewers to predict or draw are present. The final schematic (around 02:05) could be used as a prompt by a teacher, but the video does not ask learners to generate explanations or drawings itself."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Key terms are introduced on-screen ('Diploid cell' [00:06], 'Chromatin' [00:10], 'Sister chromatids' [00:28], 'Tetrad' [00:40], 'Crossing Over' [00:34]). For a 7th-grader some of these are new and the frames show labels but not plain-language definitions, so scaffolding is partial."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 3.33,
+        "score_runs": [
+          4.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The material stays mostly within a basic prior-knowledge range (shows that cells have material that becomes visible chromosomes). However, it assumes comfort with terms like 'homologous' and 'tetrad' (schematic and labels at ~01:20–01:40) without explicit unpacking, so a few spots could confuse this persona but are not fatal."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3.33,
+        "score_runs": [
+          4.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Information is presented in succinct visual chunks (00:00–02:10). For a 15-minute focus window the clip could be watched and re-watched as needed, but the lack of spoken pacing and embedded pauses means some 7th-graders might need to pause more often (e.g., at the crossing-over segment ~01:10)."
+      }
+    },
+    "n_runs": 3
+  },
+  "human_overfitting": {
+    "dims": {
+      "accuracy": 5.0,
+      "logic": 4.08,
+      "adaptability": 3.22,
+      "engagement": 3.1
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "[02:50] Presents the canonical training-error vs test-error vs model-complexity graph (training error decreases with complexity; test error is U-shaped) and [01:25] explains overfitting as near-perfect training accuracy but poor test performance — both statements and on-screen plots match standard introductory ML descriptions. Agent1's presentation_analysis notes on-screen figures are correct (high)."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "[02:10–02:40] Defines training error, test error, and generalization; [00:55–01:35] illustrates underfitting and overfitting with plots and analogies; [04:10–04:45] introduces bias–variance. These cover the title and the listed learning goals."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3.67,
+        "score_runs": [
+          3.0,
+          5.0,
+          3.0
+        ],
+        "evidence": "The detective analogy runs throughout (training=data=solved cases, test=fresh cases) and is used to contrast three detectives and their strategies [00:50, 02:10, 02:40]. This single strong analogy supports comprehension for the target learner."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "Plots showing underfit/appropriate/overfit curves (three-panel example) do explanatory work by visually demonstrating how models fit the same points differently [02:30]. The error-vs-complexity graph visually explains the trade-off [03:30]."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Overall slides are clean, high-contrast and professional (legible headings and icons, consistent spacing) — examples include the card-style 'Training Data / Test Data' [00:50] and the cheat-sheet table [04:40]."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "There are explicit pause-for-thought prompts and a quick quiz: 'Which Detective Would You Hire?' [02:10] and the 'Quick Challenge' about 98% training / 55% test accuracy [04:10]. These invite short reflection."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The 'Think About It' detective selection and the 'Quick Challenge' ask the viewer to classify a model's behavior, prompting learners to apply concepts rather than passively listen [02:10, 04:10]."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "Key terms are introduced with simple definitions for a non-CS first-year (e.g. 'A model is a pattern-finding rule' [00:20]; 'Training Data vs. Test Data' explained with cards [00:50]; 'bias' and 'variance' labeled and described later [05:10])."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "The lesson stays within the persona's background — it uses analogies and simple plots rather than formal ML prerequisites. It does assume familiarity with reading a simple 2D plot but not with train/test splits or learning curves, which it defines [00:50–03:30]."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Information density is moderate: core ideas are introduced with one example each and a recap/cheat-sheet at the end, fitting the persona's 20-minute focus window (wrap-up and next steps shown at ~05:40). A couple dense frames (graph/table) may need a short pause to absorb."
+      }
+    },
+    "n_runs": 3
+  },
+  "meiosis_AI": {
+    "dims": {
+      "accuracy": 4.89,
+      "logic": 4.08,
+      "adaptability": 3.89,
+      "engagement": 3.53
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "Narration and diagrams consistently match high-school correct biology: copied chromosome shown as X-shaped sister chromatids with centromere [01:48], mechanism of lining up and spindle pulling described & illustrated [02:18] and [02:36], and meiosis contrasted correctly as producing half-set gametes [03:38]–[03:55]. Presentation analysis reports on-screen figures are correct (diagrams correctly depict replication, sister chromatids, alignment, spindle, and daughter cells)."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 4.67,
+        "score_runs": [
+          5.0,
+          4.0,
+          5.0
+        ],
+        "evidence": "Covers core topics implied by the title: basic cell division concept introduced [00:15], chromosome replication explained [01:22], chromosome structure after replication shown [01:48], equal distribution/line-up and split explained [02:18], and meiosis briefly contrasted for reproduction [03:38]–[03:55]."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          3.0,
+          4.0
+        ],
+        "evidence": "The video uses a clear analogy — chromosomes = instruction booklet — and concrete examples (growing taller, scraped knee healing) early on [00:04] to connect abstract ideas to everyday experience."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 4.0,
+        "score_runs": [
+          3.0,
+          4.0,
+          5.0
+        ],
+        "evidence": "[01:50] The progressive illustrations (single → copied X shape → lined up → split) do real explanatory work, showing mechanism (copy then split) so viewers can see why each daughter cell gets a full set."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.67,
+        "score_runs": [
+          3.0,
+          4.0,
+          4.0
+        ],
+        "evidence": "[00:00] The layout uses a consistent pastel palette, readable typography, and clear icons. Slides are uncluttered and professional-looking; labels like 'nucleus' and 'chromosomes' are large and legible."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          3.0,
+          4.0
+        ],
+        "evidence": "There is a genuine pause-and-think prompt 'Your Turn: What If It Skipped Copying?' which asks viewers to predict and pause at [02:20], giving an opportunity to test understanding."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The video prompts prediction (what would happen if copying were skipped?) at [02:20], encouraging learners to reason rather than only listen; however, there is only one such prompt rather than multiple generative activities."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.67,
+        "score_runs": [
+          3.0,
+          4.0,
+          4.0
+        ],
+        "evidence": "[00:45] Key technical words ('nucleus', 'chromosomes') are introduced with simple definitions and a clear visual metaphor ('instruction booklet'), which is appropriate for 7th grade vocabulary level."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 4.33,
+        "score_runs": [
+          3.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "[00:05–01:50] The video stays within the persona's prior knowledge: it assumes only a basic idea that living things grow and are made of cells, and it builds chromosome meaning from scratch rather than assuming prior knowledge about DNA/chromosome structure."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3.67,
+        "score_runs": [
+          3.0,
+          4.0,
+          4.0
+        ],
+        "evidence": "[overall timing] Information density and speed are well-matched to a 7th-grader's attention span: steps are explained slowly with visuals and a single short active pause. A slightly slower moment during the 'line up and split' sequence would help some learners, but overall it fits the 15-minute focus window."
+      }
+    },
+    "n_runs": 3
+  },
+  "mid_mei_b": {
+    "dims": {
+      "accuracy": 3.33,
+      "logic": 2.88,
+      "adaptability": 3.0,
+      "engagement": 3.0
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 4.0,
+        "score_runs": [
+          4.0,
+          4.0,
+          4.0
+        ],
+        "evidence": "On-screen definitions and factual claims are correct for a high-school conceptual treatment: 'Cell defined as the basic structural and functional unit of life' (~[00:18]); mitosis stages listed correctly (Prophase, Metaphase, Anaphase, Telophase) with appropriate short descriptions (~[01:30]); meiosis purpose and comparison table correctly state '4 unique' daughter cells and 'half' chromosome number (~[02:00]–[02:05]). Agent 1's presentation_analysis also reports on-screen figure/diagram correctness = High, so diagrams were checked and found correct."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Core topics implied by the title are present at a conceptual level: cell division defined (~[00:55]), mitosis stages explained (~[01:30]), meiosis purpose and comparison included (~[02:00]–[02:05]). However, a key topic relevant to the title/learning goals—explicit chromosome/DNA replication prior to division (S phase)—is omitted (~[01:25] noted as omission)."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "There are some intuitive labels and metaphors (e.g., 'The Microscopic City' used as a tour title and organelles listed with job-like functions), but rich analogies or extended concrete examples (animations showing copies of chromosomes being pulled apart) are limited in the frames shown."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The mitosis slide includes a 4-step flow (Prophase → Metaphase → Anaphase → Telophase) which supports conceptual sequencing (~01:30). Still, the visuals are largely static text and tables; there are few dynamic diagrams that would show the mechanical process (chromosome duplication/separation) visually in a way that noticeably reduces cognitive load."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Overall design is clean with good typography and strong sectioning (large numbered banners). Minor weaknesses: faint watermark visible behind text at 00:40 and some small table text (organelles / comparisons) that may be hard to read on small devices (~01:10)."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The presentation explicitly poses a reflective question ('Which is more important: stability or variation?') visible near the end and earlier asks 'How did you become you?' which invites thinking. These are genuine prompts but there appear to be only a few rather than a series of check-ins."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "There is some invitation to think (the questions noted above), but there are no clear 'pause and draw' or 'predict what will happen next' prompts visible in the frames — so limited generative activity is present."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Key terms needed for this lesson (cell, nucleus, chromosome-related stage names like 'prophase') are used. Many are presented with short plain-language definitions (e.g., 'Cell: The basic structural and functional unit of life' at ~00:18). However some specific words (like 'chromatid' or 'genetically identical') might benefit from extra scaffolding for a 7th-grader."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The video stays mostly within expected prior knowledge (cells, growth, repair). It introduces mitosis and meiosis at a conceptual level and labels stages without requiring background in chromosome structure beyond a basic notion that DNA is copied — appropriate for the persona. A few finer-grained terms (e.g., 'sister chromatids') appear and could be briefly explained (mitosis flow at ~01:30)."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Information is presented in short, titled chunks (section slides at 00:20, 01:30, 02:00) and not densely packed per slide, matching the persona's 15-minute focus window. At the same time, some slides are text-heavy and could slow a 7th-grader who reads slowly (tables at ~01:10)."
+      }
+    },
+    "n_runs": 3
+  },
+  "mid_tri_a": {
+    "dims": {
+      "accuracy": 4.67,
+      "logic": 3.79,
+      "adaptability": 3.33,
+      "engagement": 3.13
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 4.0,
+        "score_runs": [
+          5.0,
+          2.0,
+          5.0
+        ],
+        "evidence": "[00:30] Centroid coordinate formula G = ((x1+x2+x3)/3,(y1+y2+y3)/3) shown; [01:36] Incenter formula I = (a*A + b*B + c*C)/(a+b+c) shown; [02:36] Circumcenter described as intersection of perpendicular bisectors and equidistant from vertices; [04:12] Euler line diagram with O, G, H collinear. On-screen figures/formulae were checked and found correct (presentation_analysis.on_screen_figure_diagram_correctness = High)."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "[00:20–01:18] Centroid defined, formula and examples shown; [01:26–01:58] Incenter and incircle covered; [02:16–02:58] Circumcenter and circumradius examples; [03:18–04:04] Orthocenter and applications; [04:44] Final summary compares centers — all title-implied topics are present and addressed."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "Multiple concrete examples and real‑world applications are used (steel plate support, fire station placement, satellite orbit example), giving intuition beyond abstract definitions (examples visible across the video, e.g., engineering application ~02:00 and emergency placement ~02:30)."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "Visuals do explanatory work: medians, perpendicular bisectors, and altitudes are drawn to show where centers lie (orthocenter/circumcenter examples such as right triangle circumcenter with circumscribed circle at ~03:15). Some diagrams are static and could benefit from staged builds to show construction steps more clearly."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Overall clean, consistent slide design with good spacing and color coding. One legibility issue with small formula text during the centroid worked example (~00:40) is noted; motion/animations are subtle and professional."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "There are worked examples posed and solved (e.g., centroid coordinate problems, circumradius calculation), which function as implicit checks. However, there are few explicit pause-and-think prompts where the narrator intentionally waits for the learner to answer before proceeding."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The video invites learners to compute centers using coordinates in several examples (e.g., centroid with coordinates and fractional coordinates problems), but it does not frequently pause to ask viewers to attempt a step without immediate solution."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "Key terms (centroid, incenter, circumcenter, orthocenter, median, bisector, altitude) are used and generally accompanied by diagrams. Definitions appear when introduced, pitched appropriately for a 9th‑grade listener."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "The lesson assumes basic familiarity with triangle sides and coordinate points (within the persona's 'Has' list). It does not require higher‑level math beyond the persona's background; coordinate arithmetic is simple and shown stepwise (examples at ~01:10 and later)."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "Information density per slide is moderate and examples are short — fits a 15‑minute focus window. A few slides show small text or multiple formulas at once which could force a pause/rewind (~00:40), but overall pace is acceptable."
+      }
+    },
+    "n_runs": 3
+  },
+  "phys_good_a": {
+    "dims": {
+      "accuracy": 3.11,
+      "logic": 3.21,
+      "adaptability": 3.0,
+      "engagement": 3.0
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "Equations and on-screen algebra are algebraically correct (e.g. Kepler's empirical form P^2 = a^3 shown at [02:40]; substitution P = 2πR / v and algebraic steps shown at ~[03:45]–[04:20]). However the video states Kepler's law 'in general' without clarifying the constant depends on central mass ([02:40]) and the derivation to v ∝ 1/√R does not show the dynamical origin via GM (the mv^2/R = GMm/R^2 step is omitted) (~[03:45]). On-screen figures/equations were checked and found substantively correct for the level presented (Agent 1 noted on-screen-figure correctness is High)."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Core topics implied by 'Circular Motion' are present: demonstration linking radius to speed ([00:20], [01:45]), Kepler's 3rd law statement and proportional form ([02:40]–[02:55]), and algebraic derivation to v ∝ 1/√R (~[03:45]–[04:35]). Missing or only briefly mentioned: explicit connection that gravity provides centripetal acceleration (not derived) and the role of central mass in the full Newtonian form (omitted) ([03:45], [02:40])."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Good concrete example: conical funnel + marbles illustrate orbit-speed vs radius physically [00:20–01:30]. Also uses the Solar System schematic to connect to real planets [02:40]. One effective example present, but not multiple layered analogies."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The funnel demo and planet schematic do explanatory work (showing faster motion inner orbits) [00:20–01:30, 02:40]. However the algebra section could be better tied to which part of the demo it explains when shown side-by-side [03:30]."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Clean layout: readable typography, high-contrast slides, and clear top-down demo shots. The split-screen composition is serviceable but could use better emphasis tools (highlighting) during algebra [03:45]. No 'AI-slop' imagery detected; text legible in screenshots [02:40, 03:50]."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The PI QUESTION (multiple choice) is explicitly shown, prompting the student to think [01:25–01:50]. The video does not strongly enforce a pause or prolonged think interval, however (stop sign appears but timing is brief) [01:40]."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The PI question asks the viewer to predict a relationship (generative). The demonstration invites comparison/observation (watch marbles at different radii) but there are no repeated interleaved tasks that ask the learner to pause and calculate themselves beyond the one PI question [01:25–01:50]."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Terminology (P, a/R, orbital period, velocity) is at an appropriate level for a 1st‑year student familiar with Newtonian mechanics and Kepler's formula; algebraic steps are shown when used (see derivation slides) [02:40, 03:45]."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The video assumes basic algebra and centripetal/gravitation intuition (which this persona has). It does not require advanced math beyond the persona's background, and the funnel demo helps bridge gaps [00:20–01:30, 03:45]."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Information density matches a short lesson for a 1st‑year: demonstrations followed by compact derivation. Occasional split-screen algebra + moving demo increases cognitive load and might force a rewind for some learners [03:30-03:50], but overall the rhythm is reasonable for a 6‑minute focus window."
+      }
+    },
+    "n_runs": 3
+  },
+  "phys_mid_c": {
+    "dims": {
+      "accuracy": 4.55,
+      "logic": 3.59,
+      "adaptability": 3.89,
+      "engagement": 3.07
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 4.67,
+        "score_runs": [
+          5.0,
+          4.0,
+          5.0
+        ],
+        "evidence": "[00:35] shows Newtonian gravity Fg = GMm / R^2; [00:44] shows centripetal force F_centripetal = m v^2 / R; [01:36] algebra correctly yields T^2 = 4π^2 R^3 / (G M). On-screen orbit diagram, force arrow direction, and algebra are checked and found correct (presentation_analysis.on_screen_figure_diagram_correctness = High). No algebraic or sign errors detected."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 4.33,
+        "score_runs": [
+          4.0,
+          4.0,
+          5.0
+        ],
+        "evidence": "[00:25] states Fg = F_centripetal; [01:12] relates v to T; [01:36]-[01:50] derives and states Kepler's Third Law T^2 ∝ R^3 and dependence on M. All title-implied topics are present at suitable depth for an 'understand' target."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 2.67,
+        "score_runs": [
+          3.0,
+          2.0,
+          3.0
+        ],
+        "evidence": "A concrete representation (circular orbit diagram showing Fg, m, M, and R) is used as the worked example for the algebraic derivation, but no additional analogies or multiple real-world comparisons are provided (diagram present from 00:05 onward)."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "The visuals actively support the derivation: the orbit + force arrow explain why centripetal force equals gravitational force and justify the algebraic substitutions (visible at ~00:40). However, the visuals are primarily static sketches and algebra — they do explanatory work but without dynamic animations that might enhance intuition further."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.67,
+        "score_runs": [
+          4.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "The tablet-handwritten aesthetic is clean, high-contrast, and readable; equations are large and spaced, and color-coding is consistent (labels in blue, algebra in light-blue/white). The UI icons are small and unobtrusive (top-right at 00:05)."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 2.0,
+        "score_runs": [
+          2.0,
+          1.0,
+          3.0
+        ],
+        "evidence": "No embedded pause-and-think prompts or on-screen quiz questions are visible in the frames; the video appears to be a continuous worked derivation without explicit learner-facing checks (no question prompts shown at 00:05–01:30)."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 2.0,
+        "score_runs": [
+          2.0,
+          1.0,
+          3.0
+        ],
+        "evidence": "There are no visible instructions asking the viewer to predict, derive themselves, or pause to draw (the frames show continuous worked steps rather than prompts such as 'try it now')."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.67,
+        "score_runs": [
+          4.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "Key terms used (centripetal, gravitational force, v = 2πR/T) are appropriate for a first-year student familiar with Newtonian mechanics. The notation is standard and not overloaded (equations visible at 00:40 and 01:20)."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 4.33,
+        "score_runs": [
+          5.0,
+          5.0,
+          3.0
+        ],
+        "evidence": "The derivation relies on formulas the persona knows (Newtonian gravity and centripetal acceleration, and Kepler's period relation v = 2πR/T). The video does not assume advanced topics beyond the persona's stated background (substitution GMm/R^2 = mv^2/R shown at 00:40)."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3.67,
+        "score_runs": [
+          4.0,
+          4.0,
+          3.0
+        ],
+        "evidence": "Information is presented in modest chunks with one algebraic operation per visual update (e.g., substitution at ~00:40, then v substitution at ~01:20, and rearrangement to T^2 ∝ R^3 thereafter). That pacing suits a 6-minute focus window for stepwise mathematical derivation; a brief concluding interpretation would perfect the fit."
+      }
+    },
+    "n_runs": 3
+  },
+  "tri_low_1": {
+    "dims": {
+      "accuracy": 2.33,
+      "logic": 2.5,
+      "adaptability": 3.44,
+      "engagement": 3.03
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "On-screen constructions and geometric claims are correct for the content shown: arcs and perpendicular constructions leading to altitudes are drawn correctly and the three altitudes meet at a single point identified as the orthocenter (see the drawn altitudes and intersection at [00:20]; the altitude from C to AB is shown meeting AB at right angle at ~[00:11]). Agent 1's diagram-audit flags on_screen_figure_diagram_correctness as High, and I checked the same frames and found no persistent geometric errors."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 1.0,
+        "score_runs": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "evidence": "The title/learning goal (compare centroid, incenter, circumcenter) is not met: the video only demonstrates orthocenter construction and omits centroid, incenter, circumcenter definitions, properties, and comparisons (absence noted at ~[00:26]; only orthocenter construction shown [00:04 - 00:22])."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "[00:22] The video uses multiple visual representations (arcs, intersection points, perpendicular lines) to show the same idea, which acts like concrete examples, but it does not introduce analogies or real-world examples to build extra intuition."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 3.67,
+        "score_runs": [
+          3.0,
+          3.0,
+          5.0
+        ],
+        "evidence": "[00:20] The progressive overlay of arcs and the animation of constructing perpendiculars do explanatory work — the orthocenter emerges from the intersection of altitudes — but no text labels or short captions are provided to spell out the why, limiting explanatory depth for some learners."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          3.0,
+          4.0
+        ],
+        "evidence": "[00:10] The composition is clean and animations are smooth; color choices for different construction arcs are helpful. However the animated compass sometimes overlaps small marks (e.g., [00:14]) which can momentarily reduce legibility."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 2.33,
+        "score_runs": [
+          3.0,
+          3.0,
+          1.0
+        ],
+        "evidence": "[00:18] The presentation is demonstration-only; it does not include explicit pause-and-think questions. A student could self-pause to answer implicit questions, so there is at least an opportunity for one embedded question if the learner acts, but none is posed on-screen."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 2.33,
+        "score_runs": [
+          3.0,
+          3.0,
+          1.0
+        ],
+        "evidence": "[00:22] The video visually guides the learner through steps they could replicate (draw arcs, mark intersections, draw altitudes), which invites a do-it-yourself activity implicitly, but the video does not explicitly prompt the learner to try it themselves."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          3.0,
+          4.0
+        ],
+        "evidence": "[00:05] The video assumes basic geometry notions a typical 9th-grader has (altitude, perpendicular) but does not provide on-screen definitions for any new terms — acceptable for this grade but borderline for learners who 'lack' deeper conceptual comparisons."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 3.67,
+        "score_runs": [
+          3.0,
+          3.0,
+          5.0
+        ],
+        "evidence": "[00:03] The construction stays within basic compass-and-straightedge skills and the student's stated prior knowledge (knows definitions of triangle centers). It does not assume advanced theorems; a few steps (e.g., why intersecting perpendiculars locate the orthocenter) are implicit and might require prior familiarity."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3.33,
+        "score_runs": [
+          3.0,
+          3.0,
+          4.0
+        ],
+        "evidence": "[00:00–00:40] The visual stepwise progress is paced so a 9th-grader with a 15-minute attention budget can follow and pause when needed. The lack of explicit pauses or prompts means active students must self-manage pacing by pausing."
+      }
+    },
+    "n_runs": 3
+  },
+  "phys_slop_1": {
+    "dims": {
+      "accuracy": 2.22,
+      "logic": 3.46,
+      "adaptability": 3.0,
+      "engagement": 3.0
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 3.33,
+        "score_runs": [
+          4.0,
+          4.0,
+          2.0
+        ],
+        "evidence": "[00:10] Slide states Kepler discovered the law in '1618' (minor historical error; Harmonices Mundi is normally dated 1619). Otherwise factual claims and data/table/plots are correct: [01:10] bullet 'r^3 ∝ T^2' is stated correctly; [03:45] log-log scatter and fitted power-law line are shown and align with the narration. Presentation analysis flagged on-screen figures as correct (visuals/tables/plots consistent)."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 2.0,
+        "score_runs": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evidence": "[00:00] Title slide shows 'Case Study: Kepler's Third Law' while the audit title/request is 'Circular Motion' — core circular-motion topics (centripetal acceleration from gravity, derivation of GM/r^2 = m v^2/r, dependence of T on central mass) are not covered. Curriculum checklist shows these items 'Not covered' (no timestamps)."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Concrete, domain‑relevant examples are used: Kepler's planetary table, a plotted log–log example, and predictions for Uranus/Neptune — these ground the abstract relation in real data [01:30], [07:40]."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The log–log scatter and fitted line (shown at ~05:20) do genuine explanatory work by turning the power‑law into a straight line that the learner can inspect; however, there is no complementary dynamic derivation showing why T^2 ∝ r^3 from forces, which would strengthen explanatory power [05:20]."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Slides use a clean, consistent University template, legible fonts and well‑formatted tables and code boxes. No obvious illegible text or 'AI slop' imagery; the design is serviceable and professional [00:00], [01:30], [03:10]."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "A slide explicitly titled 'Questions for you to investigate' presents concrete prompts (e.g., what will happen with specified table commands) and invites learner reflection rather than purely rhetorical questions [06:00]."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The lesson asks learners to run MATLAB commands, create log–log plots, compute polyfit and predict radii for Uranus/Neptune — genuine generative tasks are present though they could be emphasized with a short pause to attempt them [03:10], [07:40]."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Terminology (orbital period, orbital radius, log–log plot, polyfit) is appropriate for a first‑year student with Newtonian mechanics; key MATLAB terms appear with brief context but not lengthy definitions [00:20], [03:10]."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Content stays largely within the persona's physics background (Kepler + Newton) but introduces MATLAB usage (readtable, polyfit) which the persona may not already know — the slides demonstrate commands but assume basic MATLAB familiarity; manageable but a potential gap for some students [03:10]."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Information density is moderate: individual slides focus on single steps, but the sequence moves from data → plotting → fitting → prediction without extended pauses. For a learner with a 6‑minute Focus Time this is mostly acceptable but could feel slightly rushed at the MATLAB/code sections [03:10], [05:00]."
+      }
+    },
+    "n_runs": 3
+  },
+  "triangles_AL": {
+    "dims": {
+      "accuracy": 5.0,
+      "logic": 4.09,
+      "adaptability": 3.0,
+      "engagement": 3.0
+    },
+    "metrics": {
+      "A1": {
+        "name": "A1_factual_accuracy",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "[00:30] Defines centroid as intersection of medians; [01:10] Defines incenter as intersection of angle bisectors and shows inscribed circle tangent to sides; [01:40] Defines circumcenter via perpendicular bisectors and shows circumcircle; [02:05] Demonstrates circumcenter can lie outside for obtuse triangle. Presentation analysis: on-screen geometric figures were checked and found correct (medians, bisectors, perpendicular bisectors, 2:1 median division), so spoken facts and diagrams are consistent and accurate."
+      },
+      "A2": {
+        "name": "A2_topic_coverage",
+        "score": 5.0,
+        "score_runs": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "evidence": "The video covers all topic elements implied by the title: motivation and statement that multiple centers exist [00:00–00:15], full definitions and properties for centroid [00:30–00:55], incenter [01:10–01:20], circumcenter [01:40–01:50], distance relationships mnemonic [02:30], special-case equilateral [04:40], and applied worked examples (fountain, towns, plate) [03:30–04:15]."
+      },
+      "C1": {
+        "name": "C1_examples_analogies",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Concrete analogies and examples are used: fountain = equal to sides (incenter) ~03:30, tower = corners (circumcenter) ~03:00, and balancing plate = centroid ~04:10. These tie abstract definitions to intuitive scenarios but the video uses mainly one set of analogies rather than multiple varied analogies."
+      },
+      "C4": {
+        "name": "C4_visual_explanation_power",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Visuals show construction steps (medians, bisectors, perpendicular bisectors) and their geometric consequences (inscribed/circumscribed circles, balance point). For instance, the incenter slide shows three equal perpendicular radii to sides (~01:45), doing real explanatory work rather than merely decorating."
+      },
+      "D2": {
+        "name": "D2_visual_design",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Design is clean, consistent, and legible: vector art, clear labels (I, O, G), tick marks, and boxed tables (recap table ~04:40). Composition is professional, though pointer/zoom could be used more to emphasize small details in some slides (~01:10 median intersection)."
+      },
+      "E1": {
+        "name": "E1_embedded_questions",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The video includes genuine pause-and-think prompts (e.g. 'Quick Self-Test: Name the Center' ~02:50 and 'You Finish This One: Three Towns' ~03:50). These pauses ask learners to commit answers rather than immediately providing them."
+      },
+      "E2": {
+        "name": "E2_generative_prompts",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "There are generative tasks: predict-first on the fountain example (~03:30), a fill-in-the-chain for towns (~03:50), and an on-your-own balance-the-plate prompt (~04:00). The prompts encourage learners to apply definitions, though the video doesn't provide worked feedback cycles for multiple attempts."
+      },
+      "F1": {
+        "name": "F1_vocabulary_appropriateness",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Key terms are used with short definitions (centroid = where medians meet ~01:10; incenter = where angle bisectors meet ~01:40; circumcenter = where perpendicular bisectors meet ~02:10). The level is appropriate for a 9th-grader, but a quick reminder/visual definition of 'median' and 'perpendicular bisector' could help some students."
+      },
+      "F2": {
+        "name": "F2_prerequisite_awareness",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "The video assumes only basic triangle vocabulary (which the persona 'has'). It does not assume advanced background the persona lacks. A couple of transitions quietly use 'median' or 'angle bisector' without in-depth definition (~01:10, ~01:40) but these are within expected prior knowledge."
+      },
+      "F3": {
+        "name": "F3_pacing_fit",
+        "score": 3.0,
+        "score_runs": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "evidence": "Information density and speaking rate are moderate; short self-checks and worked examples help chunk the content (~02:50, ~03:30). A 15-minute focused 9th grader should follow comfortably, though slightly longer pauses for reflection would improve fit."
+      }
+    },
+    "n_runs": 3
+  }
+}
