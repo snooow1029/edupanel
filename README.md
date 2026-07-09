@@ -14,8 +14,8 @@ video + (course_requirement, student_persona)  ─►  3 agents  ─►  scores 
 
 | Path | Role |
 |---|---|
-| `batch_audit_processor.py` | The evaluator. Orchestrates the 3 agents, resolves videos, writes per-task JSON + a summary CSV. Run as a script. |
-| `vlm_providers.py` | Backbone abstraction. Selects Gemini / GPT / Claude and handles frame sampling for the non-native backbones. |
+| `evaluate.py` | The evaluator. Orchestrates the 3 agents, resolves videos, writes per-task JSON + a summary CSV. Run as a script. |
+| `backbones.py` | Backbone abstraction. Selects Gemini / GPT / Claude and handles frame sampling for the non-native backbones. |
 | `prompts/` | The four agent prompts (`agent1`, `agent2`, `subjective`, `subjective_text_only`) + a prompts README. |
 | `criteria/teaching_video_criteria_v2.json` | The rubric (A–F metric tree) the judge scores against. |
 | `inputs/pool_demo.json` | Demo input: the 12-video golden set with per-video course requirement + persona. |
@@ -46,7 +46,7 @@ VIBE_TEACH_VLM_PROVIDER=claude   # VIBE_TEACH_CLAUDE_MODEL (default claude-opus-
 ```
 
 Gemini ingests the MP4 natively. GPT and Claude can't, so for the video-facing
-agents (1 & 3) `vlm_providers.py` samples ~48 evenly-spaced frames with ffmpeg
+agents (1 & 3) `backbones.py` samples ~48 evenly-spaced frames with ffmpeg
 and sends them as images; Agent 2 is text-only on every backbone. Tunables:
 `VIBE_TEACH_VLM_FRAMES` (48), `VIBE_TEACH_VLM_MAXTOK` (8000),
 `VIBE_TEACH_VLM_FRAME_WIDTH` (768).
@@ -62,13 +62,13 @@ cp config/.env.example config/.env      # then fill in the key(s) you need
 set -a; . config/.env; set +a           # export keys into the environment
 
 # Gemini (default) over the 12 demo videos, 3 passes averaged downstream:
-NUM_RUNS=3 python batch_audit_processor.py
+NUM_RUNS=3 python evaluate.py
 
 # GPT backbone:
-VIBE_TEACH_VLM_PROVIDER=gpt NUM_RUNS=3 python batch_audit_processor.py
+VIBE_TEACH_VLM_PROVIDER=gpt NUM_RUNS=3 python evaluate.py
 
 # Claude backbone:
-VIBE_TEACH_VLM_PROVIDER=claude NUM_RUNS=3 python batch_audit_processor.py
+VIBE_TEACH_VLM_PROVIDER=claude NUM_RUNS=3 python evaluate.py
 ```
 
 Useful env: `INPUT_FILE` (default `inputs/pool_demo.json`), `NUM_RUNS` (passes

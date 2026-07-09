@@ -22,7 +22,7 @@ from dataclasses import dataclass
 from google import genai
 from google.genai import types
 
-import vlm_providers as vlm
+import backbones as vlm
 
 # from video_aesthetics import (
 #     computational_aesthetics_enabled_from_env,

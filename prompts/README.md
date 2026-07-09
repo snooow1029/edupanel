@@ -46,7 +46,7 @@
   - `engagement_curve`: 各階段參與度曲線
   - `cognitive_friction`: 認知摩擦程度
 
-**占位符（`batch_audit_processor` / `api_main` 注入，以程式為準）:**
+**占位符（`evaluate.py` / `api_main` 注入，以程式為準）:**
 - `{student_persona}`: 學生 persona 全文
 - `{visual_style}`, `{ai_slop_detected}`, `{audio_pacing}`, `{video_audio_alignment}`: Agent 1 簡報聲稱
 - `{vocal_consistency}`, `{audio_glitches}`: 語音銜接

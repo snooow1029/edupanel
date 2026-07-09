@@ -2,7 +2,7 @@
 """
 VLM provider abstraction for the batch audit pipeline.
 
-The production evaluator (`batch_audit_processor.py`) was Gemini-only: Agent 1 and
+The production evaluator (`evaluate.py`) was Gemini-only: Agent 1 and
 Agent 3 watch the video natively (`files.upload` + per-part `fps`), Agent 2 is
 text-only. This module lets the SAME pipeline run under Claude or GPT as the judge
 so the WATCH-family over-scoring can be tested across backbones (the Stage-1 model
@@ -194,5 +194,5 @@ def generate(*, role: str, system: str, prompt: str,
     elif PROVIDER == "gpt":
         text = _gpt_generate(system, prompt, frames)
     else:
-        raise ValueError(f"vlm_providers.generate called for provider={PROVIDER!r}")
+        raise ValueError(f"backbones.generate called for provider={PROVIDER!r}")
     return _Shim(text)
