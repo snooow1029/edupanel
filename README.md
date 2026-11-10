@@ -1,10 +1,21 @@
-# Teaching-Video Judge
+# EduPanel
 
-A backbone-swappable, 3-agent LLM evaluator for teaching videos. You drop a
-video (+ the course requirement and student persona it was made for) in, and it
-returns per-metric scores with timestamped evidence against a fixed pedagogy
-rubric. The same pipeline runs under **Gemini, GPT, or Claude** as the judge —
-selected with one env var — so you can compare backbones on the same inputs.
+[![Paper](https://img.shields.io/badge/Paper-arXiv%3A2607.18529-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.18529)
+[![Demo](https://img.shields.io/badge/Demo-Project%20Page-2563eb?logo=githubpages&logoColor=white)](https://snooow1029.github.io/edupanel/)
+
+Official code for the paper:
+
+> **EduPanel: A Three-Agent LLM Judge for Teaching Videos — Reliability, Complementarity, and Human Trust Calibration**
+> Jia-Kai Dong, Yi-Cheng Lin, Hung-yi Lee. National Taiwan University. arXiv:2607.18529 (2026).
+> Paper: https://arxiv.org/abs/2607.18529 · Code: https://github.com/snooow1029/edupanel · Project page: https://snooow1029.github.io/edupanel/
+
+EduPanel is a rubric-grounded, learner-conditioned LLM judge for teaching
+videos. You drop a video (+ the course requirement and student persona it was
+made for) in, and it returns per-metric scores with timestamped evidence against
+a fixed pedagogy rubric. Evaluation is decomposed across three specialized
+agents, and the same pipeline runs under a swappable backbone — **Gemini, GPT,
+or Claude** — selected with one env var, so you can compare judges on the same
+inputs. This repository reproduces the system and experiments from the paper.
 
 ```
 video + (course_requirement, student_persona)  ─►  3 agents  ─►  scores + evidence JSON
@@ -130,13 +141,9 @@ JSON per (video × pass) plus a summary CSV.
   `score` = mean, `score_runs` = the 3 raw values, `n_runs` = 3), for
   cross-backbone comparison.
 
-## Paper
+## Citation
 
-This repository accompanies:
-
-> **EduPanel: A Three-Agent LLM Judge for Teaching Videos — Reliability, Complementarity, and Human Trust Calibration**
-> Jia-Kai Dong, Yi-Cheng Lin, Hung-yi Lee. National Taiwan University. arXiv:2607.18529 (2026).
-> Paper: https://arxiv.org/abs/2607.18529 · Code: https://github.com/snooow1029/edupanel
+If you use this code or EduPanel in your work, please cite:
 
 ```bibtex
 @article{dong2026edupanel,

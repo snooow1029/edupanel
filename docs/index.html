@@ -55,10 +55,13 @@
   <!-- Relative paths keep GitHub Pages repository subpaths working. -->
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <!-- Figure viewer: keep with figure-viewer.js while any <img> has data-zoom; delete both otherwise. -->
+  <link rel="stylesheet" href="./static/css/figure-viewer.css">
   <link rel="icon" href="./static/images/favicon.svg" type="image/svg+xml">
 
   <!-- Icons are inline SVG: Font Awesome Free 6.7.2 (CC BY 4.0, https://fontawesome.com/license/free); the arXiv icon is from Academicons (SIL OFL 1.1). -->
   <script defer src="./static/js/index.js"></script>
+  <script defer src="./static/js/figure-viewer.js"></script>
 </head>
 <body>
 
@@ -115,45 +118,10 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <figure>
-        <svg viewBox="0 0 960 300" width="960" height="300" class="pipeline-svg" role="img"
-             aria-label="EduPanel pipeline: a teaching video together with its course requirement and target student persona is routed to three specialized LLM agents, which produce per-metric scores with timestamped evidence against a fixed pedagogy rubric.">
-          <defs>
-            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0 0L10 5L0 10z" fill="#64748b"/>
-            </marker>
-          </defs>
-          <!-- Input -->
-          <rect x="8" y="70" width="190" height="160" rx="12" fill="#eff4ff" stroke="#c7d6f5"/>
-          <text x="103" y="100" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Input</text>
-          <text x="103" y="132" text-anchor="middle" font-size="13" fill="#334155">Teaching video</text>
-          <text x="103" y="158" text-anchor="middle" font-size="13" fill="#334155">+ Course requirement</text>
-          <text x="103" y="184" text-anchor="middle" font-size="13" fill="#334155">+ Student persona</text>
-          <!-- Agents -->
-          <rect x="310" y="18" width="330" height="76" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
-          <text x="475" y="46" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Agent 1 &mdash; Content analyst (VLM)</text>
-          <text x="475" y="72" text-anchor="middle" font-size="12.5" fill="#475569">Watches the video; content map + factual/visual issues</text>
-          <rect x="310" y="112" width="330" height="76" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
-          <text x="475" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Agent 2 &mdash; Objective scorer (text)</text>
-          <text x="475" y="166" text-anchor="middle" font-size="12.5" fill="#475569">Scores objective rubric metrics from Agent 1</text>
-          <rect x="310" y="206" width="330" height="76" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
-          <text x="475" y="234" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Agent 3 &mdash; Persona simulator (VLM)</text>
-          <text x="475" y="260" text-anchor="middle" font-size="12.5" fill="#475569">Role-plays the learner; experiential metrics</text>
-          <!-- Output -->
-          <rect x="762" y="70" width="190" height="160" rx="12" fill="#eef9f1" stroke="#bfe3cb"/>
-          <text x="857" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Output</text>
-          <text x="857" y="146" text-anchor="middle" font-size="13" fill="#334155">Per-metric scores</text>
-          <text x="857" y="172" text-anchor="middle" font-size="13" fill="#334155">+ timestamped</text>
-          <text x="857" y="192" text-anchor="middle" font-size="13" fill="#334155">evidence</text>
-          <!-- Arrows input -> agents -->
-          <line x1="200" y1="150" x2="305" y2="56"  stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-          <line x1="200" y1="150" x2="305" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-          <line x1="200" y1="150" x2="305" y2="244" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-          <!-- Arrows agents -> output -->
-          <line x1="642" y1="56"  x2="758" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-          <line x1="642" y1="150" x2="758" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-          <line x1="642" y1="244" x2="758" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-        </svg>
-        <figcaption class="teaser-caption">EduPanel conditions evaluation on the intended learner: a teaching video, its course requirement, and a target student persona are scored by three specialized agents against a fixed pedagogy rubric.</figcaption>
+        <img src="./static/images/overview.png" width="1229" height="676" data-zoom
+             data-zoom-title="EduPanel overview"
+             alt="EduPanel overview. Three inputs — a teaching video, the course requirement, and the student persona — feed the agents. The content analyst outputs a content map plus potential visual and factual issues; the objective scorer then scores content-related metrics. The persona simulator role-plays the target student and scores persona-related metrics. Both paths produce 1-to-5 scores and a reasoning comment with timestamps.">
+        <figcaption class="teaser-caption">EduPanel conditions evaluation on the intended learner: a teaching video, its course requirement, and a target student persona are scored by three specialized agents, producing 1&ndash;5 scores and reasoning comments with timestamps.</figcaption>
       </figure>
     </div>
   </div>

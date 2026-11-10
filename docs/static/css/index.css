@@ -501,17 +501,6 @@ main video {
   box-shadow: var(--shadow-lg);
 }
 
-/* Inline pipeline schematic: scale like an image, framed on a white card. */
-.teaser .pipeline-svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  padding: 1rem;
-  background: #fff;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-lg);
-}
-
 .teaser-caption {
   margin-top: 1.25rem;
   color: var(--text-secondary);
