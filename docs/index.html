@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>EduPanel: A Three-Agent LLM Judge for Teaching Videos | Dong et al.</title>
+  <meta name="description" content="EduPanel is a rubric-grounded, learner-conditioned LLM judge that uses three specialized agents to assess the pedagogical quality of teaching videos.">
+  <meta name="keywords" content="LLM-as-a-judge, teaching video evaluation, multi-agent, pedagogical quality, learner-conditioned, educational technology, multimodal, VLM">
+  <meta name="author" content="Jia-Kai Dong, Yi-Cheng Lin, Hung-yi Lee">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- Open Graph / social cards -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="EduPanel">
+  <meta property="og:title" content="EduPanel: A Three-Agent LLM Judge for Teaching Videos">
+  <meta property="og:description" content="EduPanel is a rubric-grounded, learner-conditioned LLM judge that uses three specialized agents to assess the pedagogical quality of teaching videos.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="EduPanel: A Three-Agent LLM Judge for Teaching Videos">
+  <meta name="twitter:description" content="EduPanel is a rubric-grounded, learner-conditioned LLM judge that uses three specialized agents to assess the pedagogical quality of teaching videos.">
+
+  <!-- Scholar metadata (Google Scholar reads citation_*). -->
+  <meta name="citation_title" content="EduPanel: A Three-Agent LLM Judge for Teaching Videos -- Reliability, Complementarity, and Human Trust Calibration">
+  <meta name="citation_author" content="Dong, Jia-Kai">
+  <meta name="citation_author" content="Lin, Yi-Cheng">
+  <meta name="citation_author" content="Lee, Hung-yi">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2607.18529">
+
+  <!-- Structured data. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "EduPanel: A Three-Agent LLM Judge for Teaching Videos -- Reliability, Complementarity, and Human Trust Calibration",
+    "description": "EduPanel is a rubric-grounded, learner-conditioned LLM judge that uses three specialized agents to assess the pedagogical quality of teaching videos.",
+    "author": [
+      { "@type": "Person", "name": "Jia-Kai Dong", "affiliation": { "@type": "Organization", "name": "National Taiwan University" } },
+      { "@type": "Person", "name": "Yi-Cheng Lin", "affiliation": { "@type": "Organization", "name": "National Taiwan University" } },
+      { "@type": "Person", "name": "Hung-yi Lee", "affiliation": { "@type": "Organization", "name": "National Taiwan University" } }
+    ],
+    "datePublished": "2026-07-20",
+    "keywords": ["LLM-as-a-judge", "teaching video evaluation", "multi-agent", "pedagogical quality", "learner-conditioned"],
+    "abstract": "We present EduPanel, a rubric-grounded, learner-conditioned LLM judge that decomposes evaluation across specialized agents to produce interpretable assessments for different aspects of teaching quality.",
+    "isAccessibleForFree": true
+  }
+  </script>
+
+  <!-- Inter at every weight the CSS uses: 400 body, 500 authors, 600 buttons and links, 700 headings, 800 title. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+
+  <!-- Relative paths keep GitHub Pages repository subpaths working. -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg" type="image/svg+xml">
+
+  <!-- Icons are inline SVG: Font Awesome Free 6.7.2 (CC BY 4.0, https://fontawesome.com/license/free); the arXiv icon is from Academicons (SIL OFL 1.1). -->
+  <script defer src="./static/js/index.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<main id="main-content" tabindex="-1">
+
+<!-- Title block: title, authors, status, resource buttons -->
+<section class="hero publication-header">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="has-text-centered">
+        <h1 class="title is-1 publication-title">EduPanel: A <span class="nowrap">Three-Agent</span> LLM Judge for Teaching Videos</h1>
+        <p class="is-size-5 publication-subtitle">Reliability, Complementarity, and Human Trust Calibration</p>
+
+        <p class="is-size-5 publication-authors">
+          <span class="author-block">Jia-Kai Dong,</span>
+          <span class="author-block">Yi-Cheng Lin,</span>
+          <span class="author-block">Hung-yi Lee</span>
+        </p>
+
+        <p class="is-size-5 publication-affiliations">
+          <span class="author-block">National Taiwan University</span>
+        </p>
+
+        <p class="publication-venue">Preprint &middot; arXiv:2607.18529 (2026)</p>
+
+        <!-- Resource buttons: one per verified resource. -->
+        <div class="publication-links">
+          <a href="https://arxiv.org/pdf/2607.18529" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 512 512" aria-hidden="true"><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 144-208 0c-35.3 0-64 28.7-64 64l0 144-48 0c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"/></svg></span>
+            <span>Paper</span>
+          </a>
+          <a href="https://arxiv.org/abs/2607.18529" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 448 512" aria-hidden="true"><path d="m 119.65,351.996 c -5.84961,0.13477 -11.1943,-3.29883 -13.502,-8.67578 -2.19629,-5.27051 -0.61914,-8.9668 4.19727,-15.8652 7.05469,-10.3799 78.8242,-96.5625 78.8242,-96.5625 l -15.8828,-14.8633 c -13.3809,-13.3779 -13.9561,-31.333 -1.50977,-43.7754 l 18.4922,-17.6133 -51.5977,-63.377 c -4.00586,-4.26758 -6.48535,-11.7559 -4.24805,-17.1309 2.27832,-5.53613 7.69727,-9.12891 13.6836,-9.07031 3.83398,0.0957 7.43262,1.87402 9.83789,4.86133 l 61.3691,57.0566 94.5762,-90.0703 c 3.19434,-3.08398 7.44336,-4.83984 11.8828,-4.91016 1.60449,0.0039 3.19824,0.245117 4.73242,0.714844 5.7793,1.80566 10.249,6.41797 11.8711,12.252 1.2998,5.47363 -0.27637,11.2334 -4.18164,15.2832 l -83.0859,100.011996 14.8789,13.834 c 11.0957,10.0029 11.1543,27.3906 0.12695,37.4688 l -16.2949,15.6309 56.2559,66.4434 0.0742,0.0859 0.0664,0.0899 c 5.02734,6.53125 7.43164,11.5615 4.83984,17.9395 -3.13379,5.96875 -8.69727,10.29 -15.2559,11.8516 -0.67676,0.0908 -1.35938,0.13574 -2.04297,0.13671 l -0.004,-0.0117 c -4.42871,-0.27051 -8.61035,-2.13086 -11.7754,-5.24023 l -0.13086,-0.10743 -0.12304,-0.11132 -65.207,-59.127 -89.8965,86.2402 c 0,0 -5.33398,6.47754 -10.9707,6.61133 z m 178.104,-33.041 c 0.47852,-0.002 0.95703,-0.0332 1.43164,-0.0957 4.84277,-1.33301 8.95605,-4.54004 11.4316,-8.91016 1.44922,-3.5625 1.00293,-6.45703 -4.19727,-13.2148 l -56.0586,-66.2188 -26.375,25.3027 64.9551,58.9062 c 2.33887,2.41504 5.46484,3.91113 8.8125,4.2168 v 0.0137 z M 192.436,227.402 334.446,57.244 c 2.78711,-3.48926 4.5293,-6.97949 3.3418,-10.9121 -1.16113,-4.30273 -4.43457,-7.71777 -8.68555,-9.05664 -1.08105,-0.333984 -2.20508,-0.503906 -3.33594,-0.505859 -3.20801,0.07617 -6.26953,1.35645 -8.57617,3.58789 l -142.033,135.284999 c -11.1719,11.1719 -9.48242,26.0195 1.39258,36.8945 z"/></svg></span>
+            <span>arXiv</span>
+          </a>
+          <a href="https://github.com/snooow1029/edupanel" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 496 512" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+            <span>Code</span>
+          </a>
+          <a href="https://doi.org/10.48550/arXiv.2607.18529" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 640 512" aria-hidden="true"><path d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 435.6 319.5 435.6 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.98 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg></span>
+            <span>DOI</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser: a full-width schematic of the pipeline (the single best visual of the system; no outcome figure is published). -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <figure>
+        <svg viewBox="0 0 960 300" width="960" height="300" class="pipeline-svg" role="img"
+             aria-label="EduPanel pipeline: a teaching video together with its course requirement and target student persona is routed to three specialized LLM agents, which produce per-metric scores with timestamped evidence against a fixed pedagogy rubric.">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0L10 5L0 10z" fill="#64748b"/>
+            </marker>
+          </defs>
+          <!-- Input -->
+          <rect x="8" y="70" width="190" height="160" rx="12" fill="#eff4ff" stroke="#c7d6f5"/>
+          <text x="103" y="100" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Input</text>
+          <text x="103" y="132" text-anchor="middle" font-size="13" fill="#334155">Teaching video</text>
+          <text x="103" y="158" text-anchor="middle" font-size="13" fill="#334155">+ Course requirement</text>
+          <text x="103" y="184" text-anchor="middle" font-size="13" fill="#334155">+ Student persona</text>
+          <!-- Agents -->
+          <rect x="310" y="18" width="330" height="76" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
+          <text x="475" y="46" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Agent 1 &mdash; Content analyst (VLM)</text>
+          <text x="475" y="72" text-anchor="middle" font-size="12.5" fill="#475569">Watches the video; content map + factual/visual issues</text>
+          <rect x="310" y="112" width="330" height="76" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
+          <text x="475" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Agent 2 &mdash; Objective scorer (text)</text>
+          <text x="475" y="166" text-anchor="middle" font-size="12.5" fill="#475569">Scores objective rubric metrics from Agent 1</text>
+          <rect x="310" y="206" width="330" height="76" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
+          <text x="475" y="234" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Agent 3 &mdash; Persona simulator (VLM)</text>
+          <text x="475" y="260" text-anchor="middle" font-size="12.5" fill="#475569">Role-plays the learner; experiential metrics</text>
+          <!-- Output -->
+          <rect x="762" y="70" width="190" height="160" rx="12" fill="#eef9f1" stroke="#bfe3cb"/>
+          <text x="857" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Output</text>
+          <text x="857" y="146" text-anchor="middle" font-size="13" fill="#334155">Per-metric scores</text>
+          <text x="857" y="172" text-anchor="middle" font-size="13" fill="#334155">+ timestamped</text>
+          <text x="857" y="192" text-anchor="middle" font-size="13" fill="#334155">evidence</text>
+          <!-- Arrows input -> agents -->
+          <line x1="200" y1="150" x2="305" y2="56"  stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+          <line x1="200" y1="150" x2="305" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+          <line x1="200" y1="150" x2="305" y2="244" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+          <!-- Arrows agents -> output -->
+          <line x1="642" y1="56"  x2="758" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+          <line x1="642" y1="150" x2="758" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+          <line x1="642" y1="244" x2="758" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+        </svg>
+        <figcaption class="teaser-caption">EduPanel conditions evaluation on the intended learner: a teaching video, its course requirement, and a target student persona are scored by three specialized agents against a fixed pedagogy rubric.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Teaching videos are becoming a major medium for education, creating a growing need for scalable evaluation of their pedagogical quality. Existing automatic judges do not fully address this setting because teaching quality depends on multimodal evidence and should be evaluated with respect to the intended learner rather than as a universal property. We present EduPanel, a rubric-grounded, learner-conditioned LLM judge that decomposes evaluation across specialized agents to produce interpretable assessments for different aspects of teaching quality. Across expert studies, architecture ablations, and learner-persona analyses, EduPanel achieves reliability comparable to a median human expert. In expert evaluation, its feedback improves scoring accuracy (MAE 0.87 to 0.73), while experts remain able to detect unreliable outputs (AUC = 0.77) instead of accepting them blindly. These results suggest that EduPanel can serve as effective assistants for educational evaluation rather than replacements for human experts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works: the three agents -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">How EduPanel Works</h2>
+    <div class="content">
+      <p class="measure">EduPanel decomposes judging across three specialized agents whose ownership of each metric is decided by the rubric, not by code. The rubric is a fixed A&ndash;F tree of 24 pedagogy metrics, and every score is returned with timestamped <code>[MM:SS]</code> evidence. The same pipeline runs under a swappable backbone &mdash; Gemini, GPT, or Claude &mdash; so judges can be compared on identical inputs.</p>
+      <div class="table-figure">
+        <p class="table-caption" id="agents-caption"><strong>Table 1.</strong> The three agents and what each one sees and scores.</p>
+        <div class="table-container" role="region" aria-labelledby="agents-caption" tabindex="0">
+          <table class="table is-narrow">
+            <thead>
+              <tr><th scope="col">Agent</th><th scope="col">Sees</th><th scope="col">Job</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Agent 1 &mdash; content analyst (VLM)</th><td>the video</td><td>Produces a content map and a list of potential factual/visual issues, including on-screen figure and diagram correctness.</td></tr>
+              <tr><th scope="row">Agent 2 &mdash; objective scorer (text)</th><td>Agent 1's output + rubric</td><td>Scores the objective metrics (e.g. content accuracy), folding in the figure and diagram errors Agent 1 surfaced.</td></tr>
+              <tr><th scope="row">Agent 3 &mdash; persona simulator (VLM)</th><td>the video + persona</td><td>Role-plays the target student and scores experiential and visual-usage metrics such as visual explanation power and engagement.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key findings -->
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Key Findings</h2>
+    <div class="content">
+      <ul class="measure">
+        <li><strong>Expert-level reliability.</strong> Across expert studies, architecture ablations, and learner-persona analyses, EduPanel reaches reliability comparable to a median human expert.</li>
+        <li><strong>It makes human scoring more accurate.</strong> Showing experts EduPanel's feedback lowers their mean absolute error from 0.87 to 0.73.</li>
+        <li><strong>Experts can still catch its mistakes.</strong> Experts detect unreliable EduPanel outputs with an AUC of 0.77, rather than accepting them blindly.</li>
+        <li><strong>Assistant, not replacement.</strong> These results position EduPanel as an effective assistant for educational evaluation, complementing human experts rather than replacing them.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop">
+    <div class="bibtex-header">
+      <h2 class="title is-3" id="bibtex-heading">BibTeX</h2>
+      <button type="button" class="copy-bibtex-btn" data-copy-target="bibtex-code" data-copy-status="bibtex-copy-status">
+        <span class="icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M208 0L332.1 0c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9L448 336c0 26.5-21.5 48-48 48l-192 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48zM48 128l80 0 0 64-64 0 0 256 192 0 0-32 64 0 0 48c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 176c0-26.5 21.5-48 48-48z"/></svg></span>
+        <span class="copy-text">Copy</span>
+      </button>
+    </div>
+    <div class="sr-only" id="bibtex-copy-status" role="status" aria-live="polite"></div>
+    <pre tabindex="0" role="region" aria-labelledby="bibtex-heading"><code id="bibtex-code">@article{dong2026edupanel,
+  title   = {EduPanel: A Three-Agent LLM Judge for Teaching Videos -- Reliability, Complementarity, and Human Trust Calibration},
+  author  = {Dong, Jia-Kai and Lin, Yi-Cheng and Lee, Hung-yi},
+  journal = {arXiv preprint arXiv:2607.18529},
+  year    = {2026}
+}</code></pre>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer: keep both template credits and the licence link (CC BY-SA 4.0 requires attribution). -->
+<footer class="footer">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <p>
+        This page was built with the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>,
+        which was adapted from the <a href="https://nerfies.github.io">Nerfies</a> project page.
+        It is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

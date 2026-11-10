@@ -129,3 +129,20 @@ JSON per (video × pass) plus a summary CSV.
   Gemini **3-pass averaged** scorings of the same 12 videos (each metric carries
   `score` = mean, `score_runs` = the 3 raw values, `n_runs` = 3), for
   cross-backbone comparison.
+
+## Paper
+
+This repository accompanies:
+
+> **EduPanel: A Three-Agent LLM Judge for Teaching Videos — Reliability, Complementarity, and Human Trust Calibration**
+> Jia-Kai Dong, Yi-Cheng Lin, Hung-yi Lee. National Taiwan University. arXiv:2607.18529 (2026).
+> Paper: https://arxiv.org/abs/2607.18529 · Code: https://github.com/snooow1029/edupanel
+
+```bibtex
+@article{dong2026edupanel,
+  title   = {EduPanel: A Three-Agent LLM Judge for Teaching Videos -- Reliability, Complementarity, and Human Trust Calibration},
+  author  = {Dong, Jia-Kai and Lin, Yi-Cheng and Lee, Hung-yi},
+  journal = {arXiv preprint arXiv:2607.18529},
+  year    = {2026}
+}
+```
